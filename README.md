@@ -8,11 +8,11 @@ August 2016 - December 2017: Hongzhao Guan's Research Project at GTCMT (Georgia 
                              
 December 2016 - August 2017: Hongzhao Guan's Research Project at GTCMT
 
-                             A HMM (Hidden Markov Model) approach was created.
+                             An HMM (Hidden Markov Model) approach was created.
                              
 August 2017 - December 2017: Hongzhao Guan and Zhao Yan's Group Project for CS7643 (Deep Learning)
 
-                             A LSTM approach was created.
+                             An LSTM approach was created.
                              The 599 dataset was augumented.
                              
 December 2017 -     Current:  We are trying to make this project a publication.
