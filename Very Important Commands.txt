@@ -1,5 +1,0 @@
-from music21 import *
-import tkinter
-path = filedialog.askopenfilename()
-c = converter.parse(path)
-a.articulations = ['music21.articulations.Fingering 1']
