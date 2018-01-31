@@ -1,0 +1,6245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise version="3.0">
+  <movement-title>1.xml</movement-title>
+  <identification>
+    <creator type="composer">Music21</creator>
+    <encoding>
+      <software>Finale 2014.5 for Windows</software>
+      <software>Dolet Light for Finale 2014.5</software>
+      <encoding-date>2016-10-27</encoding-date>
+      <supports attribute="new-system" element="print" type="yes" value="yes"/>
+      <supports attribute="new-page" element="print" type="yes" value="yes"/>
+      <supports element="accidental" type="yes"/>
+      <supports element="beam" type="yes"/>
+      <supports element="stem" type="yes"/>
+    </encoding>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>7.1967</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+    <page-layout>
+      <page-height>1553</page-height>
+      <page-width>1200</page-width>
+      <page-margins type="both">
+        <left-margin>70</left-margin>
+        <right-margin>70</right-margin>
+        <top-margin>88</top-margin>
+        <bottom-margin>88</bottom-margin>
+      </page-margins>
+    </page-layout>
+    <system-layout>
+      <system-margins>
+        <left-margin>0</left-margin>
+        <right-margin>0</right-margin>
+      </system-margins>
+      <system-distance>121</system-distance>
+      <top-system-distance>70</top-system-distance>
+    </system-layout>
+    <staff-layout>
+      <staff-distance>60</staff-distance>
+    </staff-layout>
+    <appearance>
+      <line-width type="stem">0.7487</line-width>
+      <line-width type="beam">5</line-width>
+      <line-width type="staff">0.7487</line-width>
+      <line-width type="light barline">0.7487</line-width>
+      <line-width type="heavy barline">5</line-width>
+      <line-width type="leger">0.7487</line-width>
+      <line-width type="ending">0.7487</line-width>
+      <line-width type="wedge">0.7487</line-width>
+      <line-width type="enclosure">0.7487</line-width>
+      <line-width type="tuplet bracket">0.7487</line-width>
+      <note-size type="grace">60</note-size>
+      <note-size type="cue">60</note-size>
+      <distance type="hyphen">120</distance>
+      <distance type="beam">8</distance>
+    </appearance>
+    <music-font font-family="Maestro,engraved" font-size="20.4"/>
+    <word-font font-family="Times New Roman" font-size="10.2"/>
+  </defaults>
+  <credit page="1">
+    <credit-words default-x="71" default-y="1460" font-size="12" valign="top">Score</credit-words>
+  </credit>
+  <credit page="2">
+    <credit-words default-x="71" default-y="1488" font-size="12" valign="top">2</credit-words>
+  </credit>
+  <part-list>
+    <score-part id="P1">
+      <part-name>Track 1</part-name>
+      <score-instrument id="P1-I1">
+        <instrument-name>Acoustic Grand Piano</instrument-name>
+      </score-instrument>
+      <midi-instrument id="P1-I1">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+      </midi-instrument>
+    </score-part>
+    <score-part id="P2">
+      <part-name>Track 2</part-name>
+      <score-instrument id="P2-I2">
+        <instrument-name>Acoustic Grand Piano</instrument-name>
+      </score-instrument>
+      <midi-instrument id="P2-I2">
+        <midi-channel>3</midi-channel>
+        <midi-program>1</midi-program>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+  <!--=========================================================-->
+  <part id="P1">
+    <measure number="1" width="189">
+      <print>
+        <system-layout>
+          <system-margins>
+            <left-margin>70</left-margin>
+            <right-margin>0</right-margin>
+          </system-margins>
+          <top-system-distance>211</top-system-distance>
+        </system-layout>
+        <measure-numbering>system</measure-numbering>
+      </print>
+      <attributes>
+        <divisions>60</divisions>
+        <key>
+          <fifths>0</fifths>
+          <mode>major</mode>
+        </key>
+        <time>
+          <beats>6</beats>
+          <beat-type>8</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <sound tempo="120"/>
+      <note>
+        <rest measure="yes"/>
+        <duration>180</duration>
+        <voice>1</voice>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="2" width="279">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="48">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="95">
+        <pitch>
+          <step>F</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="45" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="148">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="227">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="3" width="261">
+      <note default-x="16">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="139">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="168">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="210">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="4" width="262">
+      <note default-x="17">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="25" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="140">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="169">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="211">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="5" width="290">
+      <print new-system="yes">
+        <system-layout>
+          <system-distance>114</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="82">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="123">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="174">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="200">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="240">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="6" width="268">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="91">
+        <pitch>
+          <step>F</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="45" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="143">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="218">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="7" width="251">
+      <note default-x="16">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="42">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="83">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="134">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="201">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="8" width="250">
+      <note default-x="17">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="25" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="43">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="83">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="134">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="200">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="9" width="283">
+      <print new-system="yes">
+        <system-layout>
+          <system-distance>114</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="30" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="84">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="106">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="135">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="158">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="187">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="209">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>60</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="256">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="10" width="254">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="35" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="47">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-23">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="60" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="128">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="149">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="170">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="191">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="212">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="233">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="11" width="246">
+      <note default-x="17">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="43">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-22">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="65" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="83">
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="60" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="132">
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>60</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="55" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="197">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="12" width="277">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="35" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-23">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="55" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="85">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="114">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="137">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="159">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="182">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="204">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="227">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="256">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="13" width="274">
+      <print new-system="yes">
+        <system-layout>
+          <system-distance>114</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-22">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="60" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="126">
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="55" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="165">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>60</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="235">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="14" width="267">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="35" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="52">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-22.5">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="50" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="94">
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="60" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="137">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="158">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="180">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="201">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="223">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="244">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="15" width="258">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="70" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-22">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="60" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="137">
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>60</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="55" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="207">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="16" width="260">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="35" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-23">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="55" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="138">
+        <pitch>
+          <step>C</step>
+          <octave>7</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="65" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="168">
+        <pitch>
+          <step>B</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-22">down</stem>
+        <beam number="1">continue</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="60" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="210">
+        <pitch>
+          <step>A</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-25">down</stem>
+        <beam number="1">end</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="55" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="17" width="293">
+      <print new-page="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="75">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="95">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="115">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="155">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="175">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="195">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="215">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="235">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="255">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="275">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="18" width="263">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="36">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="53">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="93">
+        <pitch>
+          <step>F</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="45" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="141">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="160">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="177">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="218">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="19" width="252">
+      <note default-x="17">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="36">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="53">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="40" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="155">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="172">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="206">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="20" width="251">
+      <note default-x="16">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="36">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="53">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="35" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="155">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="171">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="206">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="21" width="292">
+      <print new-system="yes">
+        <system-layout>
+          <system-distance>114</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="75">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="93">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="127">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="175">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="195">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="212">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="246">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="22" width="264">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="50" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="36">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="53">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="93">
+        <pitch>
+          <step>F</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="45" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="141">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="178">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="218">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="23" width="252">
+      <note default-x="16">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="36">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="53">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>E</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="40" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="136">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="155">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="172">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="207">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="15" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="24" width="252">
+      <note default-x="16">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="36">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="53">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>D</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="35" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>B</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">3</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="155">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="172">
+        <rest/>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+      <note default-x="207">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>30</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-30.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="15" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="25" width="1060">
+      <print new-system="yes">
+        <system-layout>
+          <system-distance>114</system-distance>
+        </system-layout>
+      </print>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="30" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="150">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="244">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="30" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="338">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="432">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="30" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="526">
+        <rest/>
+        <duration>15</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="620">
+        <pitch>
+          <step>C</step>
+          <octave>6</octave>
+        </pitch>
+        <duration>72</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <time-modification>
+          <actual-notes>5</actual-notes>
+          <normal-notes>6</normal-notes>
+        </time-modification>
+        <stem default-y="-20.5">down</stem>
+        <notations>
+          <tuplet bracket="yes" number="1" type="start"/>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="944">
+        <rest/>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <time-modification>
+          <actual-notes>5</actual-notes>
+          <normal-notes>6</normal-notes>
+        </time-modification>
+        <notations>
+          <tuplet number="1" type="stop"/>
+        </notations>
+      </note>
+      <barline location="right">
+        <bar-style>light-heavy</bar-style>
+      </barline>
+    </measure>
+  </part>
+  <!--=========================================================-->
+  <part id="P2">
+    <measure number="1" width="189">
+      <print>
+        <measure-numbering>none</measure-numbering>
+      </print>
+      <attributes>
+        <divisions>24</divisions>
+        <key>
+          <fifths>0</fifths>
+          <mode>major</mode>
+        </key>
+        <time>
+          <beats>6</beats>
+          <beat-type>8</beat-type>
+        </time>
+        <clef>
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+      </attributes>
+      <sound tempo="120"/>
+      <note>
+        <rest measure="yes"/>
+        <duration>72</duration>
+        <voice>1</voice>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="2" width="279">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="48">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="48">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="72">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="95">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="95">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="124">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="148">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="203">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="227">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="227">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="256">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="3" width="261">
+      <note default-x="16">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">3</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="66">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="6">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">3</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="116">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="139">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="168">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">3</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="168">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="189">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="210">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="6">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">3</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="210">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="239">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="4" width="262">
+      <note default-x="17">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="66">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="88">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="116">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="140">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="169">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="169">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="190">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="211">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="9" placement="above">3</fingering>
+            <fingering default-x="2" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="211">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="240">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="5" width="290">
+      <print new-system="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="82">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">3</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="82">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="102">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="123">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">3</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="123">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="151">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="174">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="200">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">3</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="200">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="220">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="240">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">3</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="240">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="269">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="6" width="268">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="68">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="91">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="91">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="120">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="143">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="195">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="218">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="218">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="247">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="7" width="251">
+      <note default-x="16">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="42">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">3</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="42">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="63">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="83">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">3</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="83">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="112">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="134">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">3</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="181">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="201">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">3</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="201">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="230">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="8" width="250">
+      <note default-x="17">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="43">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">2</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="43">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="63">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="83">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="9" placement="above">2</fingering>
+            <fingering default-x="2" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="83">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="112">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="134">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">2</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="161">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="180">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="200">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">2</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="200">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="229">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="9" width="283">
+      <print new-system="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-4.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="4" placement="above">4</fingering>
+            <fingering default-x="2" default-y="4" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="56">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="84">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="106">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-4.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="4" placement="above">4</fingering>
+            <fingering default-x="2" default-y="4" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="106">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="135">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="158">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-4.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="4" placement="above">4</fingering>
+            <fingering default-x="2" default-y="4" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="158">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="187">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="209">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>3</normal-notes>
+        </time-modification>
+        <stem default-y="-4.5">up</stem>
+        <notations>
+          <tuplet bracket="no" number="1" placement="above" type="start"/>
+          <technical>
+            <fingering default-x="1" default-y="3" placement="above">4</fingering>
+            <fingering default-x="2" default-y="3" placement="above">2</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="209">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>3</normal-notes>
+        </time-modification>
+        <stem>up</stem>
+      </note>
+      <note default-x="244">
+        <rest/>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>3</normal-notes>
+        </time-modification>
+        <notations>
+          <tuplet number="1" type="stop"/>
+        </notations>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="10" width="254">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="47">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="25">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="47">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="67">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-55">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+      </note>
+      <note default-x="107">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="128">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="170">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="25">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="170">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="191">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="212">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-55">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="212">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+      </note>
+      <note default-x="233">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="11" width="246">
+      <note default-x="17">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="43">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="43">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="63">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="83">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="83">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="112">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="132">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="157">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="157">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="177">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="197">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="197">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="225">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="12" width="277">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="45">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="64">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="85">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="85">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="114">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="137">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="182">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="182">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="204">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="227">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="227">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="256">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="13" width="274">
+      <print new-system="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="25">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="106">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="126">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-55">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="126">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+      </note>
+      <note default-x="145">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="165">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="196">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="25">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="196">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="216">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="235">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-55">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="235">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+      </note>
+      <note default-x="254">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="14" width="267">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="52">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="25">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="30" placement="above">3</fingering>
+            <fingering default-x="2" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="52">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="73">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="94">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-55">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="94">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+      </note>
+      <note default-x="115">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="137">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="25">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="30" placement="above">3</fingering>
+            <fingering default-x="3" default-y="30" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="180">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="201">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="223">
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-55">down</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="223">
+        <chord/>
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>down</stem>
+      </note>
+      <note default-x="244">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="15" width="258">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="67">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="21">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="88">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="117">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="137">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="3" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="166">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="166">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="187">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="207">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="21">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="207">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="236">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="16" width="260">
+      <note default-x="16">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="25" placement="above">2</fingering>
+            <fingering default-x="3" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="46">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="67">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="21">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="29" placement="above">2</fingering>
+            <fingering default-x="3" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="88">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="117">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="138">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="15">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="168">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="20">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="25" placement="above">2</fingering>
+            <fingering default-x="2" default-y="25" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="168">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="189">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="210">
+        <pitch>
+          <step>A</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="21">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="29" placement="above">2</fingering>
+            <fingering default-x="2" default-y="29" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="210">
+        <chord/>
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="238">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="17" width="293">
+      <print new-page="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>36</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <dot/>
+        <stem default-y="15">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="20" placement="above">3</fingering>
+            <fingering default-x="3" default-y="20" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="56">
+        <chord/>
+        <pitch>
+          <step>B</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>36</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <dot/>
+        <stem>up</stem>
+      </note>
+      <note default-x="175">
+        <rest/>
+        <duration>24</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+      </note>
+      <note default-x="255">
+        <rest/>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="18" width="263">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="73">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="93">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="1">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="93">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="121">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="141">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="177">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="177">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="198">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="218">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="1">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="218">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="245">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="19" width="252">
+      <note default-x="17">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="5" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">2</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="70">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="88">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">2</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="88">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="115">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="5" placement="above">4</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">2</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="189">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="206">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">2</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="206">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="234">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="20" width="251">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">2</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="70">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="1">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">2</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="114">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="171">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">2</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="171">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="188">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="206">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="1">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="9" placement="above">2</fingering>
+            <fingering default-x="2" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="206">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="233">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="21" width="292">
+      <print new-system="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="93">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="10" placement="above">2</fingering>
+            <fingering default-x="2" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="93">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="109">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="127">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">2</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="127">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="154">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="175">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="212">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">2</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="212">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="228">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="246">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">2</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="246">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="274">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="22" width="264">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="73">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="93">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="93">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="121">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="141">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="178">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">3</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="178">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="198">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="218">
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">3</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="218">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="245">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="23" width="252">
+      <note default-x="16">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">2</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="70">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">2</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="115">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="136">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="10" placement="above">2</fingering>
+            <fingering default-x="3" default-y="10" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="189">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="207">
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="14" placement="above">2</fingering>
+            <fingering default-x="3" default-y="14" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="207">
+        <chord/>
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="234">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="24" width="252">
+      <note default-x="16">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">2</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="53">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="70">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="87">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="9" placement="above">2</fingering>
+            <fingering default-x="3" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="87">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="114">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="135">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>12</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem default-y="-5">up</stem>
+        <beam number="1">begin</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">5</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0">up</stem>
+        <beam number="1">end</beam>
+        <beam number="2">backward hook</beam>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="5" placement="above">2</fingering>
+            <fingering default-x="3" default-y="5" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="172">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="189">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="207">
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="0.5">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="1" default-y="9" placement="above">2</fingering>
+            <fingering default-x="2" default-y="9" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="207">
+        <chord/>
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="234">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+    </measure>
+    <!--=======================================================-->
+    <measure number="25" width="1060">
+      <print new-system="yes"/>
+      <note default-x="56">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-4">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="4" placement="above">3</fingering>
+            <fingering default-x="3" default-y="4" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="56">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="150">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="244">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-4">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="4" placement="above">3</fingering>
+            <fingering default-x="3" default-y="4" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="244">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="338">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="432">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem default-y="-4">up</stem>
+        <notations>
+          <technical>
+            <fingering default-x="2" default-y="4" placement="above">3</fingering>
+            <fingering default-x="3" default-y="4" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="432">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+        <stem>up</stem>
+      </note>
+      <note default-x="526">
+        <rest/>
+        <duration>6</duration>
+        <voice>1</voice>
+        <type>16th</type>
+      </note>
+      <note default-x="620">
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>3</normal-notes>
+        </time-modification>
+        <stem default-y="-4">up</stem>
+        <notations>
+          <tuplet bracket="no" number="1" placement="above" type="start"/>
+          <technical>
+            <fingering default-x="2" default-y="3" placement="above">3</fingering>
+            <fingering default-x="3" default-y="3" placement="above">1</fingering>
+          </technical>
+        </notations>
+      </note>
+      <note default-x="620">
+        <chord/>
+        <pitch>
+          <step>E</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>3</normal-notes>
+        </time-modification>
+        <stem>up</stem>
+      </note>
+      <note default-x="823">
+        <rest/>
+        <duration>18</duration>
+        <voice>1</voice>
+        <type>eighth</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>3</normal-notes>
+        </time-modification>
+        <notations>
+          <tuplet number="1" type="stop"/>
+        </notations>
+      </note>
+      <barline location="right">
+        <bar-style>light-heavy</bar-style>
+      </barline>
+    </measure>
+  </part>
+  <!--=========================================================-->
+</score-partwise>
