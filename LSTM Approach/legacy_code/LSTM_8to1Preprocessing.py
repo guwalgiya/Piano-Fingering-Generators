@@ -5,10 +5,6 @@ def main(book_interval, book_finger):
     label_list = []
     for i in range(len(book_interval)):
         seq_input_list, seq_label_list = create_training(book_interval[i], book_finger[i])
-#        print('%%%%%%%%%%%%%%%%%%%%%')
-#        print(book_interval[i])
-#        print(seq_input_list)
-#        print(seq_label_list)
         input_list = input_list + seq_input_list
         label_list = label_list + seq_label_list
         

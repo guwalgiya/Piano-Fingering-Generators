@@ -26,7 +26,7 @@ def main(midi_list):
         else:
             song_interval.append(seq_interval)
             song_finger.append(seq_finger)
-        print('Work')
+        # print('Work')
     except:
         pass
     return song_interval, song_finger

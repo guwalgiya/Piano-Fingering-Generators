@@ -19,4 +19,4 @@ first_two_fingers = [1,2]
 
 a = (first_two_fingers[0] - 1) * 25 + (testing_interval_array[0] + 13) 
 b = (first_two_fingers[1] - 1) * 25 + (testing_interval_array[1] + 13) 
-first_testing_input = [a,b];
+first_testing_input = [a,b]

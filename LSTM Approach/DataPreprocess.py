@@ -1,4 +1,3 @@
-import os
 import glob
 from music21 import converter
 
@@ -10,18 +9,17 @@ def main(training_path):
     book_finger = []
     
     #go to the path where the training set locates
-    os.chdir(training_path)
-    
+    # chdir(training_path)
     #have to parse '.xml' files
-    for file_name in glob.glob("*.xml"):  
+    for file_name in glob.glob(training_path+"/*.xml"):  
         song_interval, song_finger = preprocess(file_name)     
         book_interval = book_interval + song_interval
         book_finger = book_finger + song_finger
-        
+    
     return book_interval, book_finger
 
 def preprocess(file_name):
-    print(file_name)
+    print('preprocessing: '+file_name)
     song_interval = []
     song_finger = []
     

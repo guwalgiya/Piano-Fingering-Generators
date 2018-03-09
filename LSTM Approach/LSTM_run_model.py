@@ -1,17 +1,14 @@
-from __future__ import print_function
-
 import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import rnn
-import random
 import time
-import LSTM_preprocess2
-import LSTM_8to1Preprocessing
+import pickle
+import DataPreprocess
+import GetTrainData
 # import xml_to_midi_for_testing
-from music21 import converter
-import os
+# from music21 import converter
 
-start_time = time.time()
+
 def elapsed(sec):
     if sec<60:
         return str(sec) + " sec"
@@ -22,53 +19,19 @@ def elapsed(sec):
 
 
 # Target log path
-logs_path = './'
+logs_path = './logs'
 writer = tf.summary.FileWriter(logs_path)
 
-# # Text file containing words for training
-# training_file = './belling_the_cat.txt'
-
-# def read_data(fname):
-#     with open(fname) as f:
-#         content = f.readlines()
-#     content = [x.strip() for x in content]
-#     content = [content[i].split() for i in range(len(content))]
-#     content = np.array(content)
-#     content = np.reshape(content, [-1, ])
-#     return content
-
-training_path = '../Datasets/Czerny_599_with Fingering'
-book_interval, book_finger = LSTM_preprocess2.main(training_path)
-input_list, label_list = LSTM_8to1Preprocessing.main(book_interval, book_finger)
-# os.chdir("..")
-# training_data = read_data(training_file)
-print("Loaded training data...")
-
-def getTestData():
-    piece = converter.parse('LSTM_test.xml')
-    testing_midi = xml_to_midi_for_testing.main(piece)
-    testing_midi_array = np.array(testing_midi)
-    testing_interval_array = np.diff(testing_midi_array)
-
-    first_two_fingers = [1, 2, 3]
-
-    a = first_two_fingers[0]
-    b = testing_interval_array[0]
-    c = first_two_fingers[1]
-    d = testing_interval_array[1]
-    e = first_two_fingers[2]
-    f = testing_interval_array[2]
-
-    first_testing_input = [a,b,c,d,e,f]
-    return testing_interval_array, first_testing_input
-
-
-
+input_list = pickle.load(open("../Datasets/processed/input_list.pkl", "rb"))
+label_list = pickle.load(open("../Datasets/processed/label_list.pkl", "rb"))
+# block_length = 4
+# training_path = '../Datasets/Czerny_599_with_Fingering'
+# book_interval, book_finger = DataPreprocess.main(training_path)
+# input_list, label_list = GetTrainData.main(book_interval, book_finger, block_length)
 
 def generateNewState(old_state, finger_pred, new_interval):
     return old_state[2:]+[finger_pred, new_interval]
 
-vocab_size = 5
 
 # test_interval, first_input = getTestData()
 
@@ -78,25 +41,25 @@ training_iters = 60000
 display_step = 1000
 n_input = 8
 n_phrase = len(input_list)
-
+finger_size = 5
 # number of units in RNN cell
 n_hidden = 256
 
 # tf Graph input
 x = tf.placeholder("float", [None, n_input, 1])
-y = tf.placeholder("float", [None, vocab_size])
+y = tf.placeholder("float", [None, finger_size])
 keep_prob = tf.placeholder(tf.float32)
 
 # RNN output node weights and biases
 weights = {
-    'out': tf.Variable(tf.random_normal([n_hidden, vocab_size]))
+    'out': tf.Variable(tf.random_normal([n_hidden, finger_size]))
 }
 biases = {
-    'out': tf.Variable(tf.random_normal([vocab_size]))
+    'out': tf.Variable(tf.random_normal([finger_size]))
 }
 
 def getCell(n_hidden):
-    return tf.nn.rnn_cell.BasicLSTMCell(n_hidden)
+    return rnn.BasicLSTMCell(n_hidden)
 
 def RNN(x, weights, biases):
 
@@ -133,7 +96,10 @@ tf.summary.scalar('loss', cost)
 merged_summary_op = tf.summary.merge_all()
 # Initializing the variables
 init = tf.global_variables_initializer()
+
+
 # saver = tf.train.Saver()
+start_time = time.time()
 # Launch the graph
 with tf.Session() as session:
     session.run(init)
@@ -154,7 +120,7 @@ with tf.Session() as session:
         symbols_in_keys = input_list[offset]
         symbols_in_keys = np.reshape(np.array(symbols_in_keys), [-1, n_input, 1])
 
-        symbols_out_onehot = np.zeros([vocab_size], dtype=float)
+        symbols_out_onehot = np.zeros([finger_size], dtype=float)
         symbols_out_onehot[label_list[offset]-1] = 1.0
         symbols_out_onehot = np.reshape(symbols_out_onehot,[1,-1])
 
