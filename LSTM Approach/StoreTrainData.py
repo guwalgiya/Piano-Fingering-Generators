@@ -1,6 +1,5 @@
 import GetTrainData
 import pickle
-
 block_length           = 4
 training_path          = '../Datasets/Complete_Dataset'
 

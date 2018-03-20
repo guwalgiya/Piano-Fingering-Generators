@@ -49,10 +49,11 @@ start_time = time.time()
 # Launch the graph
 with tf.Session() as session:
     test_interval = [2,2,1,2,2,2,1,-1,-2,-2,-2,-1,-2,-2]
-    
+    test_interval = [intv/12.0 for intv in test_interval]
     saver.restore(session,"./models/model.ckpt") 
     test_finger = [1,2,3,5,4,2,3,4,5,2,1,1,2,4,5,4,3,2,1]
-    init_state = [1,test_interval[0],2,test_interval[1],3,test_interval[2],1,test_interval[3]]
+    init_state = [1/5.0,test_interval[0],2/5.0,test_interval[1],3/5.0,test_interval[2],1/5.0,test_interval[3]]
+    print(init_state)
     test_step = 0
     generate_step = len(test_interval)
     while test_step < generate_step - 4:

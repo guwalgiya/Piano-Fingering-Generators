@@ -7,4 +7,4 @@ def elapsed(sec):
         return str(sec/(60*60)) + " hr"
 
 def generateNewState(old_state, finger_pred, new_interval):
-    return old_state[2:]+[finger_pred, new_interval]
+    return old_state[2:]+[finger_pred/5.0, new_interval]
