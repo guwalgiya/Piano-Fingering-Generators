@@ -6,7 +6,6 @@ import pickle
 from Utils import elapsed
 from LSTM_network import initNet
 from parameters import *
-# import xml_to_midi_for_testing
 
 # Target log path
 logs_path = './logs'
@@ -61,7 +60,7 @@ with tf.Session() as session:
         loss_total += loss
         acc_total += acc
         writer.add_summary(summary, step)
-        
+
         if (step+1) % DISPLAY_STEP == 0:
             print("Iter= " + str(step+1) + ", Average Loss= " + \
                   "{:.6f}".format(loss_total/DISPLAY_STEP) + ", Average Accuracy= " + \
