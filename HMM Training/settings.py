@@ -2,7 +2,6 @@ import tkinter
 from tkinter import filedialog
 from music21 import *
 
-#此方法用于初始化
 def initial():
     
     #Method1:Program asks users to open a file

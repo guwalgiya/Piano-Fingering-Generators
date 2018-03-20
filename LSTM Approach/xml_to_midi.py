@@ -26,6 +26,7 @@ def measure_finder(hand):
             measure_midi = inside_measure(hand[i])    
             
             hand_midi = hand_midi + measure_midi   
+    
     return hand_midi        
         
 
@@ -41,7 +42,7 @@ def inside_measure(measure): #used in measurefinder, measure = the measure we ar
             
         #if this element is a chord
         elif str(type(measure[i])) == "<class 'music21.chord.Chord'>": 
-            chordlist = []
+            chordlist              = []
             
             #p = part
             for p in measure[i]:    
