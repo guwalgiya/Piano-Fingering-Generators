@@ -43,4 +43,3 @@ def seq_filter(seq):
             
         seq_finger.append(seq[i+1][1])    
         return [x / 12.0 for x in seq_interval], [x / 5.0 for x in seq_finger]
-    
