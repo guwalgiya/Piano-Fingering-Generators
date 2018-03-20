@@ -52,7 +52,7 @@ with tf.Session() as session:
     
     saver.restore(session,"./models/model.ckpt") 
     test_finger = [1,2,3,5,4,2,3,4,5,2,1,1,2,4,5,4,3,2,1]
-    init_state = [2,test_interval[0],1,test_interval[1],2,test_interval[2],3,test_interval[3]]
+    init_state = [1,test_interval[0],2,test_interval[1],3,test_interval[2],1,test_interval[3]]
     test_step = 0
     generate_step = len(test_interval)
     while test_step < generate_step - 4:
