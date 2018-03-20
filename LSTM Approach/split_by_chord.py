@@ -1,4 +1,4 @@
-def main(midi_list):
+def main(midi_list, normalization=True):
     song_interval = []
     song_finger   = []
     start         = 0
@@ -6,7 +6,7 @@ def main(midi_list):
     while stop < len(midi_list):
         if type(midi_list[stop]) is list:
             seq                      = midi_list[start:stop]
-            seq_interval, seq_finger = seq_filter(seq)
+            seq_interval, seq_finger = seq_filter(seq, normalization)
             if seq_interval == []:
                 pass
             else:
@@ -20,7 +20,7 @@ def main(midi_list):
             stop = stop + 1
     try:
         seq = midi_list[start:stop]
-        seq_interval, seq_finger = seq_filter(seq)
+        seq_interval, seq_finger = seq_filter(seq, normalization)
         if seq_interval == []:
             pass
         else:
@@ -31,7 +31,7 @@ def main(midi_list):
         pass
     return song_interval, song_finger
 
-def seq_filter(seq):
+def seq_filter(seq, normalization=True):
     seq_interval = []
     seq_finger = []
     if len(seq) < 3:
@@ -41,5 +41,8 @@ def seq_filter(seq):
             seq_interval.append(seq[i + 1][0] - seq[i][0])
             seq_finger.append( seq[i][1] )
             
-        seq_finger.append(seq[i+1][1])    
-        return [x / 12.0 for x in seq_interval], [x / 5.0 for x in seq_finger]
+        seq_finger.append(seq[i+1][1])
+        if normalization:
+            return [x / 12.0 for x in seq_interval], [x / 5.0 for x in seq_finger]
+        else:
+            return seq_interval, seq_finger

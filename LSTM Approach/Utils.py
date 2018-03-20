@@ -6,5 +6,9 @@ def elapsed(sec):
     else:
         return str(sec/(60*60)) + " hr"
 
-def generateNewState(old_state, finger_pred, new_interval):
-    return old_state[2:]+[finger_pred/5.0, new_interval]
+def generateNewState(old_state, finger_pred, new_interval, normalization=True):
+    if normalization:
+        return old_state[2:]+[finger_pred/5.0, new_interval]
+    else:
+        return old_state[2:]+[finger_pred, new_interval]
+    
