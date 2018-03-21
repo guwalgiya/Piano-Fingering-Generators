@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.contrib import rnn
+# from tensorflow.contrib import rnn
 import time
 import pickle
 import evaluatePhrase
@@ -11,7 +11,7 @@ from parameters import *
 input_list = pickle.load(open("../Datasets/processed/test_input_list.pkl", "rb"))
 label_list = pickle.load(open("../Datasets/processed/test_label_list.pkl", "rb"))
 
-x, _, keep_prob, pred = initNet()
+x, _, keep_prob, pred = initNet(BIRNN)
 
 init = tf.global_variables_initializer()
 
@@ -38,7 +38,7 @@ with tf.Session() as session:
     #     test_step+=1
     # print("Elapsed time: ", elapsed(time.time() - start_time))
     # print("Testing finished")
-    saver.restore(session, "./models/model.ckpt")
+    saver.restore(session, "./models/bi_model.ckpt")
     for i in range(len(input_list)):
         test_interval = input_list[i]
         test_finger = label_list[i]

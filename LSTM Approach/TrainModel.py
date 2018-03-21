@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.contrib import rnn
+# from tensorflow.contrib import rnn
 import time
 import pickle
 from Utils import elapsed
@@ -14,7 +14,7 @@ writer = tf.summary.FileWriter(logs_path)
 input_list = pickle.load(open("../Datasets/processed/train_input_list.pkl", "rb"))
 label_list = pickle.load(open("../Datasets/processed/train_label_list.pkl", "rb"))
 
-x, y, keep_prob, pred = initNet()
+x, y, keep_prob, pred = initNet(BIRNN)
 
 # Loss and optimizer
 cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
@@ -73,7 +73,7 @@ with tf.Session() as session:
             print("%s - [%s] vs [%s]" % (symbols_in,symbols_out,symbols_out_pred))
         step += 1
         offset += 1
-    saver.save(session, "./models/model.ckpt")
+    saver.save(session, "./models/bi_model.ckpt")
 
     print("Optimization Finished!")
     print("Elapsed time: ", elapsed(time.time() - start_time))

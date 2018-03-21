@@ -21,19 +21,29 @@ def RNN(x, weights, biases):
     return tf.matmul(outputs[-1], weights['out']) + biases['out']
 
 def BiRNN(x, weights, biases):
-    pass
+    x = tf.reshape(x, [-1, N_INPUT])
+    x = tf.split(x, N_INPUT, 1)
+    rnn_cell_fw = rnn.MultiRNNCell([getCell(N_HIDDEN) for _ in range(2)])
+    # rnn_cell_fw = getCell(N_HIDDEN)
+    rnn_cell_bw = rnn.MultiRNNCell([getCell(N_HIDDEN) for _ in range(2)])
+    # rnn_cell_bw = getCell(N_HIDDEN)
+    outputs, _, _ = rnn.static_bidirectional_rnn(rnn_cell_fw, rnn_cell_bw, x, dtype=tf.float32)
+    return tf.matmul(outputs[-1], weights['out']) + biases['out']
 
-def initNet():
+def initNet(birnn=False):
     # tf Graph input
     x = tf.placeholder("float", [None, N_INPUT, 1])
     y = tf.placeholder("float", [None, FINGER_SIZE])
     keep_prob = tf.placeholder(tf.float32)
 
     # RNN output node weights and biases
-    weights = {
-        'out': tf.Variable(tf.random_normal([N_HIDDEN, FINGER_SIZE]))
-    }
     biases = {
         'out': tf.Variable(tf.random_normal([FINGER_SIZE]))
     }
-    return x, y, keep_prob, RNN(x, weights, biases)
+    weights = {'out': tf.Variable(tf.random_normal([N_HIDDEN*2, FINGER_SIZE]))} if birnn else \
+              {'out': tf.Variable(tf.random_normal([N_HIDDEN, FINGER_SIZE]))}
+
+    if birnn:
+        return x, y, keep_prob, BiRNN(x, weights, biases)
+    else:
+        return x, y, keep_prob, RNN(x, weights, biases)
