@@ -13,4 +13,4 @@ if normalization:
 pickle.dump(train_input_list, open('../Datasets/processed/train_input_list.pkl', 'wb'))
 pickle.dump(train_label_list, open('../Datasets/processed/train_label_list.pkl', 'wb'))
 pickle.dump(test_input_list, open('../Datasets/processed/test_input_list.pkl', 'wb'))
-pickle.dump(test_input_list, open('../Datasets/processed/test_input_list.pkl', 'wb'))
+pickle.dump(test_label_list, open('../Datasets/processed/test_label_list.pkl', 'wb'))
