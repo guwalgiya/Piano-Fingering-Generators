@@ -20,6 +20,9 @@ def RNN(x, weights, biases):
     # we only want the last output
     return tf.matmul(outputs[-1], weights['out']) + biases['out']
 
+def BiRNN(x, weights, biases):
+    pass
+
 def initNet():
     # tf Graph input
     x = tf.placeholder("float", [None, N_INPUT, 1])

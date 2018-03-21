@@ -7,38 +7,6 @@ import evaluatePhrase
 from LSTM_network import initNet
 from Utils import elapsed, generateNewState
 from parameters import *
-# import xml_to_midi_for_testing
-
-# # tf Graph input
-# x = tf.placeholder("float", [None, N_INPUT, 1])
-# y = tf.placeholder("float", [None, FINGER_SIZE])
-# keep_prob = tf.placeholder(tf.float32)
-
-# # RNN output node weights and biases
-# weights = {
-#     'out': tf.Variable(tf.random_normal([N_HIDDEN, FINGER_SIZE]))
-# }
-# biases = {
-#     'out': tf.Variable(tf.random_normal([FINGER_SIZE]))
-# }
-
-# def getCell(n_hidden):
-#     return rnn.BasicLSTMCell(n_hidden)
-
-# def RNN(x, weights, biases):
-#     # reshape to [1, n_input]
-#     x = tf.reshape(x, [-1, N_INPUT])
-#     # Generate a n_input-element sequence of inputs
-#     x = tf.split(x,N_INPUT,1)
-#     # with tf.name_scope('lstm'):
-#     rnn_cell = rnn.MultiRNNCell([getCell(N_HIDDEN) for _ in range(2)])
-#     # generate prediction
-#     outputs, states = rnn.static_rnn(rnn_cell, x, dtype=tf.float32)
-#     # there are n_input outputs but
-#     # we only want the last output
-#     return tf.matmul(outputs[-1], weights['out']) + biases['out']
-
-# pred = RNN(x, weights, biases)
 
 input_list = pickle.load(open("../Datasets/processed/test_input_list.pkl", "rb"))
 label_list = pickle.load(open("../Datasets/processed/test_label_list.pkl", "rb"))
@@ -84,9 +52,11 @@ with tf.Session() as session:
             finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
             print(str(init_state) + "->" + str(finger_pred))
             temp_finger_res += [finger_pred]
-            init_state = generateNewState(init_state, finger_pred, test_interval[test_step+4])
+            init_state = generateNewState(init_state, finger_pred, test_interval[test_step+4], False)
             test_step+=1
         temp_finger_res = [test_finger[3]] + temp_finger_res
-        evaluatePhrase.main(test_interval[3:], temp_finger_res, test_finger[3:])
-        print("Elapsed time: ", elapsed(time.time() - start_time))
+        print(len(temp_finger_res))
+	absTrue, absFalse = evaluatePhrase.main(test_interval[3:], temp_finger_res, test_finger[3:])
+        print(absTrue, absFalse)
+	print("Elapsed time: ", elapsed(time.time() - start_time))
         print("Testing finished")
