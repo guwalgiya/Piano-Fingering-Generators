@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow.contrib import rnn
 import time
 import pickle
+import evaluatePhrase
 from LSTM_network import initNet
 from Utils import elapsed, generateNewState
 from parameters import *
@@ -76,12 +77,16 @@ with tf.Session() as session:
         init_state = [test_finger[0], test_interval[0], test_finger[1], test_interval[1], test_finger[2], test_interval[2], test_finger[3], test_interval[3]]
         test_step = 0
         generate_step = len(test_interval)
+        temp_finger_res = []
         while test_step < generate_step - 4:
             np_init_state = np.reshape(np.array(init_state), [-1, N_INPUT, 1])
             onehot_pred_test = session.run(pred, feed_dict={x: np_init_state, keep_prob: 1})
             finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
             print(str(init_state) + "->" + str(finger_pred))
+            temp_finger_res += finger_pred
             init_state = generateNewState(init_state, finger_pred, test_interval[test_step+4])
             test_step+=1
+        temp_finger_res = [test_finger[3]] + temp_finger_res
+        evaluatePhrase.main(test_interval[3:], temp_finger_res, test_finger[3:])
         print("Elapsed time: ", elapsed(time.time() - start_time))
         print("Testing finished")
