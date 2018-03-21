@@ -39,6 +39,10 @@ with tf.Session() as session:
     # print("Elapsed time: ", elapsed(time.time() - start_time))
     # print("Testing finished")
     saver.restore(session, "./models/bi_model.ckpt")
+    total_absTrue = 0
+    total_absFalse = 0
+    total_notGood = 0
+    total_interval_len = 0
     for i in range(len(input_list)):
         test_interval = input_list[i]
         test_finger = label_list[i]
@@ -58,6 +62,11 @@ with tf.Session() as session:
         temp_finger_res = [test_finger[3]] + temp_finger_res
         print(len(temp_finger_res))
 	absTrue, absFalse, notGood = evaluatePhrase.main(test_interval[3:], temp_finger_res, test_finger[3:])
+        total_absTrue += absTrue
+        total_absFalse += absFalse
+        total_notGood += notGood
+        total_interval_len += generate_step - 3
         print(absTrue, absFalse, notGood)
 	print("Elapsed time: ", elapsed(time.time() - start_time))
         print("Testing finished")
+    print(total_absTrue/float(total_interval_len+len(input_list)), total_absFalse/float(total_interval_len), total_notGood/float(total_interval_len)) 

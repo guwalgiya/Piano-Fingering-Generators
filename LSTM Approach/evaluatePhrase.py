@@ -6,7 +6,7 @@ def main(interval_list, predicted_fingers, Gt_fingers):
     num_not_good                          =  0
 
     # predicted_fingers & Gt_fingers have one more element than interval_list does
-    for i in range(len(interval_list) - 1):
+    for i in range(len(interval_list)):
          if sanityCheck (interval_list[i], [predicted_fingers[i], predicted_fingers[i + 1]]):
              num_abs_false                += 1
          else:
