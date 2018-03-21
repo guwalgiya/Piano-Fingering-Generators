@@ -73,7 +73,7 @@ with tf.Session() as session:
             print("%s - [%s] vs [%s]" % (symbols_in,symbols_out,symbols_out_pred))
         step += 1
         offset += 1
-    saver.save(session, "./models/bi_model.ckpt")
+    saver.save(session, "./models/mono_model/model.ckpt")
 
     print("Optimization Finished!")
     print("Elapsed time: ", elapsed(time.time() - start_time))

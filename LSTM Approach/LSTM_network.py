@@ -15,7 +15,7 @@ def RNN(x, weights, biases):
     # with tf.name_scope('lstm'):
     rnn_cell = rnn.MultiRNNCell([getCell(N_HIDDEN) for _ in range(2)])
     # generate prediction
-    outputs, states = rnn.static_rnn(rnn_cell, x, dtype=tf.float32)
+    outputs, _ = rnn.static_rnn(rnn_cell, x, dtype=tf.float32)
     # there are n_input outputs but
     # we only want the last output
     return tf.matmul(outputs[-1], weights['out']) + biases['out']
@@ -40,10 +40,14 @@ def initNet(birnn=False):
     biases = {
         'out': tf.Variable(tf.random_normal([FINGER_SIZE]))
     }
-    weights = {'out': tf.Variable(tf.random_normal([N_HIDDEN*2, FINGER_SIZE]))} if birnn else \
-              {'out': tf.Variable(tf.random_normal([N_HIDDEN, FINGER_SIZE]))}
+    if birnn:
+        weights = {'out': tf.Variable(tf.random_normal([N_HIDDEN*2, FINGER_SIZE]))}
+    else:
+        weights = {'out': tf.Variable(tf.random_normal([N_HIDDEN, FINGER_SIZE]))}
 
     if birnn:
+	print ('init BiRNN')
         return x, y, keep_prob, BiRNN(x, weights, biases)
     else:
+    	print ('init RNN')
         return x, y, keep_prob, RNN(x, weights, biases)
