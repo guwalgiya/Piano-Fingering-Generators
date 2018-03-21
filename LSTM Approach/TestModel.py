@@ -83,7 +83,7 @@ with tf.Session() as session:
             onehot_pred_test = session.run(pred, feed_dict={x: np_init_state, keep_prob: 1})
             finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
             print(str(init_state) + "->" + str(finger_pred))
-            temp_finger_res += finger_pred
+            temp_finger_res += [finger_pred]
             init_state = generateNewState(init_state, finger_pred, test_interval[test_step+4])
             test_step+=1
         temp_finger_res = [test_finger[3]] + temp_finger_res
