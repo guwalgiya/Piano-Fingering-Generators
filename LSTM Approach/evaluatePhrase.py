@@ -11,9 +11,9 @@ def main(interval_list, predicted_fingers, Gt_fingers):
         if  predicted_fingers[i + 1] == Gt_fingers[i + 1]:
             num_abs_true             += 1
         else:
-            num_abs_false            += sanityCheck (interval_list[i],  (predicted_fingers[i], predicted_fingers[i + 1]))
-            num_not_good             += qualityCheck(interval_list[i], (predicted_fingers[i], predicted_fingers[i + 1]))
-    return num_abs_true, num_abs_false
+            num_abs_false            += sanityCheck (interval_list[i],  [predicted_fingers[i], predicted_fingers[i + 1]])
+            num_not_good             += qualityCheck(interval_list[i], [predicted_fingers[i], predicted_fingers[i + 1]])
+    return num_abs_true, num_abs_false, num_not_good
 
 def sanityCheck(current_interval, current_finger_combo):
     if current_interval > 0:

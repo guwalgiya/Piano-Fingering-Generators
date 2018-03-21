@@ -56,7 +56,7 @@ with tf.Session() as session:
             test_step+=1
         temp_finger_res = [test_finger[3]] + temp_finger_res
         print(len(temp_finger_res))
-	absTrue, absFalse = evaluatePhrase.main(test_interval[3:], temp_finger_res, test_finger[3:])
-        print(absTrue, absFalse)
+	absTrue, absFalse, notGood = evaluatePhrase.main(test_interval[3:], temp_finger_res, test_finger[3:])
+        print(absTrue, absFalse, notGood)
 	print("Elapsed time: ", elapsed(time.time() - start_time))
         print("Testing finished")
