@@ -1,8 +1,6 @@
-import intervalBook.wrong_combo as wrong_combo
-import intervalBook.valid_combo as valid_combo
+from IntervalBook import *
 
 def main(interval_list, predicted_fingers, Gt_fingers):
-    
     num_abs_true                     =  0
     num_abs_false                    =  0
     num_not_good                     =  0
