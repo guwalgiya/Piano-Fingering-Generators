@@ -28,4 +28,3 @@ def sanityCheck(current_interval, current_finger_combo):
 
 def qualityCheck(current_interval, current_finger_combo):
     return (current_finger_combo not in valid_combo[current_interval])
-
