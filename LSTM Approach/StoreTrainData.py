@@ -5,7 +5,7 @@ normalization          = False
 training_path          = '../Datasets/Complete_Training_Dataset'
 testing_path           = '../Datasets/Complete_Testing_Dataset'
 
-train_input_list, train_label_list = GetTrainData.main(testing_path, block_length, True, normalization)
+train_input_list, train_label_list = GetTrainData.main(training_path, block_length, True, normalization)
 test_input_list, test_label_list = GetTrainData.main(testing_path, block_length, False, normalization)
 if normalization:
     train_label_list             = [int(x * 5) for x in train_label_list]
