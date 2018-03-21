@@ -46,6 +46,8 @@ def initNet(birnn=False):
         weights = {'out': tf.Variable(tf.random_normal([N_HIDDEN, FINGER_SIZE]))}
 
     if birnn:
+	print ('init BiRNN')
         return x, y, keep_prob, BiRNN(x, weights, biases)
     else:
+    	print ('init RNN')
         return x, y, keep_prob, RNN(x, weights, biases)
