@@ -41,7 +41,17 @@ with tf.Session() as session:
             _, top_2 = tf.nn.top_k(onehot_pred_test[0], 2)
             finger_pred_first = int(top_2[0].eval())+1
             finger_pred_second = int(top_2[1].eval())+1
-            finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
+            # finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
+            finger_combo = [init_state[-2], finger_pred_first]
+            if evaluatePhrase.qualityCheck(init_state[-1], finger_combo):
+                finger_combo = [init_state[-2], finger_pred_second]
+                if evaluatePhrase.qualityCheck(init_state[-1], finger_combo):
+                    finger_pred = finger_pred_first
+                else:
+                    finger_pred = finger_pred_second
+            else:
+                finger_pred = finger_pred_first
+            
             print(str(init_state) + "->" + str(finger_pred))
             temp_finger_res += [finger_pred]
             if test_step < generate_step - 4:
