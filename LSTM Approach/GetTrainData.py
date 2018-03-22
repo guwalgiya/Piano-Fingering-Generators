@@ -14,14 +14,6 @@ def main(file_path, block_length, train=True, normalizaiton=True):
         for song_interval in book_interval:
             remove_interval_greater_than_12(song_interval)
         for i in range(len(book_interval)):
-            # temp_input_list = []
-            # temp_label_list = []
-            # for j in range(len(book_interval[i])):
-            #     seq_input_list, seq_label_list = block_sequence(book_interval[i][j], book_finger[i][j], block_length)
-            #     temp_input_list += seq_input_list
-            #     temp_label_list += seq_label_list
-            # input_list.append(temp_input_list)
-            # label_list.append(temp_label_list)
             temp_input_list = []
             temp_label_list = []
             for j in range(len(book_interval[i])):

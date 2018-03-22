@@ -2,8 +2,6 @@ import tensorflow as tf
 from tensorflow.contrib import rnn
 from parameters import *
 
-
-
 def getCell(n_hidden):
     return rnn.BasicLSTMCell(n_hidden)
 

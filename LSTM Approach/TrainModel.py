@@ -1,6 +1,5 @@
 import numpy as np
 import tensorflow as tf
-# from tensorflow.contrib import rnn
 import time
 import pickle
 from Utils import elapsed
