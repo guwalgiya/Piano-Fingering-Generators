@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 import time
 import pickle
-import evaluatePhrase
+import EvaluatePhrase
 from LSTM_network import initNet, initBeam
 from Utils import elapsed, generateNewState
 from parameters import *
@@ -45,9 +45,9 @@ with tf.Session() as session:
             finger_pred_second = top_2[1]+1
             finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
             finger_combo = [init_state[-2], finger_pred_first]
-            if evaluatePhrase.qualityCheck(init_state[-1], finger_combo):
+            if EvaluatePhrase.qualityCheck(init_state[-1], finger_combo):
                 finger_combo = [init_state[-2], finger_pred_second]
-                if evaluatePhrase.qualityCheck(init_state[-1], finger_combo):
+                if EvaluatePhrase.qualityCheck(init_state[-1], finger_combo):
                     finger_pred = finger_pred_first
                 else:
                     finger_pred = finger_pred_second
@@ -61,7 +61,7 @@ with tf.Session() as session:
             test_step+=1
         temp_finger_res = [test_finger[-1]] + temp_finger_res
         print('number of notes: '+str(len(temp_finger_res)))
-        absTrue, absFalse, notGood = evaluatePhrase.main(test_interval[BLOCK_LENGTH-1:], temp_finger_res, test_finger[BLOCK_LENGTH-1:])
+        absTrue, absFalse, notGood = EvaluatePhrase.main(test_interval[BLOCK_LENGTH-1:], temp_finger_res, test_finger[BLOCK_LENGTH-1:])
         total_absTrue += absTrue
         total_absFalse += absFalse
         total_notGood += notGood
