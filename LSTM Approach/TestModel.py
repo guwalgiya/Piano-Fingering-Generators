@@ -3,7 +3,7 @@ import tensorflow as tf
 import time
 import pickle
 import evaluatePhrase
-from LSTM_network import initNet
+from LSTM_network import initNet, initBeam
 from Utils import elapsed, generateNewState
 from parameters import *
 
@@ -11,7 +11,7 @@ input_list = pickle.load(open("../Datasets/processed/test_input_list.pkl", "rb")
 label_list = pickle.load(open("../Datasets/processed/test_label_list.pkl", "rb"))
 
 x, _, keep_prob, pred = initNet(BIRNN)
-
+onehot_holder, top_2_holder = initBeam()
 init = tf.global_variables_initializer()
 
 saver = tf.train.Saver()
@@ -37,10 +37,13 @@ with tf.Session() as session:
         while test_step < generate_step - (BLOCK_LENGTH - 1):
             np_init_state = np.reshape(np.array(init_state), [-1, N_INPUT, 1])
             onehot_pred_test = session.run(pred, feed_dict={x: np_init_state, keep_prob: 1})
-            _, top_2 = tf.nn.top_k(onehot_pred_test[0], 2)
-            finger_pred_first = int(top_2[0].eval())+1
-            finger_pred_second = int(top_2[1].eval())+1
-            # finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
+            # _, top_2 = tf.nn.top_k(onehot_pred_test[0], 2)
+            # finger_pred_first = int(top_2[0].eval()) + 1
+            # finger_pred_second = int(top_2[1].eval()) + 1
+            top_2 = session.run(top_2_holder, feed_dict={onehot_holder: onehot_pred_test[0]})
+            finger_pred_first = top_2[0]+1
+            finger_pred_second = top_2[1]+1
+            finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
             finger_combo = [init_state[-2], finger_pred_first]
             if evaluatePhrase.qualityCheck(init_state[-1], finger_combo):
                 finger_combo = [init_state[-2], finger_pred_second]
@@ -57,15 +60,15 @@ with tf.Session() as session:
                 init_state = generateNewState(init_state, finger_pred, test_interval[test_step+BLOCK_LENGTH], False)
             test_step+=1
         temp_finger_res = [test_finger[-1]] + temp_finger_res
-        print('number of notes: '+len(temp_finger_res))
+        print('number of notes: '+str(len(temp_finger_res)))
         absTrue, absFalse, notGood = evaluatePhrase.main(test_interval[BLOCK_LENGTH-1:], temp_finger_res, test_finger[BLOCK_LENGTH-1:])
         total_absTrue += absTrue
         total_absFalse += absFalse
         total_notGood += notGood
         total_interval_len += (generate_step - (BLOCK_LENGTH-1))
-        print('absolute acc: ' + absTrue, 'absolute wrong: ' + absFalse, 'not ideal: ' + notGood)
+        print('absolute acc: ' + str(absTrue), 'absolute wrong: ' + str(absFalse), 'not ideal: ' + str(notGood))
         print("Elapsed time: ", elapsed(time.time() - start_time))
         print("Testing finished")
-    print('absolute acc: ' + total_absTrue/float(total_interval_len+len(input_list)), \
-          'absolute false: ' + total_absFalse/float(total_interval_len), \
-          'not ideal: ' + total_notGood/float(total_interval_len)) 
+    print('absolute acc: ' + str(total_absTrue/float(total_interval_len+len(input_list))), \
+          'absolute false: ' + str(total_absFalse/float(total_interval_len)), \
+          'not ideal: ' + str(total_notGood/float(total_interval_len)))
