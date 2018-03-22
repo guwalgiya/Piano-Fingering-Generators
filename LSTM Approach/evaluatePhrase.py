@@ -19,7 +19,7 @@ def main(interval_list, predicted_fingers, Gt_fingers):
     return num_abs_true, num_abs_false, num_not_good
 
 def sanityCheck(current_interval, current_finger_combo):
-    if current_interval > 0:
+    if current_interval   > 0:
         return (current_finger_combo in wrong_combo["up"])
     elif current_interval < 0:
         return (current_finger_combo in wrong_combo["down"])
