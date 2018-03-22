@@ -37,13 +37,6 @@ with tf.Session() as session:
         while test_step < generate_step - (BLOCK_LENGTH - 1):
             np_init_state = np.reshape(np.array(init_state), [-1, N_INPUT, 1])
             onehot_pred_test = session.run(pred, feed_dict={x: np_init_state, keep_prob: 1})
-<<<<<<< HEAD
-            # print(onehot_pred_test)
-            _, top_2 = tf.nn.top_k(onehot_pred_test[0], 2)
-            finger_pred_first = int(top_2[0].eval())+1
-            finger_pred_second = int(top_2[1].eval())+1
-            # finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
-=======
             # _, top_2 = tf.nn.top_k(onehot_pred_test[0], 2)
             # finger_pred_first = int(top_2[0].eval()) + 1
             # finger_pred_second = int(top_2[1].eval()) + 1
@@ -51,7 +44,6 @@ with tf.Session() as session:
             finger_pred_first = top_2[0]+1
             finger_pred_second = top_2[1]+1
             finger_pred = int(tf.argmax(onehot_pred_test, 1).eval())+1
->>>>>>> 5ec1520a53cbf008de5e73cc4d6d10930bcdce42
             finger_combo = [init_state[-2], finger_pred_first]
             if evaluatePhrase.qualityCheck(init_state[-1], finger_combo):
                 finger_combo = [init_state[-2], finger_pred_second]
