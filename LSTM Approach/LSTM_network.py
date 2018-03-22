@@ -28,6 +28,11 @@ def BiRNN(x, weights, biases):
     outputs, _, _ = rnn.static_bidirectional_rnn(rnn_cell_fw, rnn_cell_bw, x, dtype=tf.float32)
     return tf.matmul(outputs[-1], weights['out']) + biases['out']
 
+def initBeam():
+    one_hot = tf.placeholder("float", [None])
+    _, top_2 = tf.nn.top_k(one_hot, 2)
+    return one_hot, top_2
+
 def initNet(birnn=False):
     # tf Graph input
     x = tf.placeholder("float", [None, N_INPUT, 1])

@@ -1,12 +1,12 @@
 import GetTrainData
 import pickle
-block_length           = 4
+from parameters import BLOCK_LENGTH
 normalization          = False
 training_path          = '../Datasets/Complete_Training_Dataset'
 testing_path           = '../Datasets/Complete_Testing_Dataset'
 
-train_input_list, train_label_list = GetTrainData.main(training_path, block_length, True, normalization)
-test_input_list, test_label_list = GetTrainData.main(testing_path, block_length, False, normalization)
+train_input_list, train_label_list = GetTrainData.main(training_path, BLOCK_LENGTH, True, normalization)
+test_input_list, test_label_list = GetTrainData.main(testing_path, BLOCK_LENGTH, False, normalization)
 if normalization:
     train_label_list             = [int(x * 5) for x in train_label_list]
     test_label_list              = [int(x * 5) for x in test_label_list]
