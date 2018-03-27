@@ -26,7 +26,7 @@ def BiRNN(x, weights, biases):
     rnn_cell_bw = rnn.MultiRNNCell([getCell(N_HIDDEN) for _ in range(2)])
     # rnn_cell_bw = getCell(N_HIDDEN)
     outputs, _, _ = rnn.static_bidirectional_rnn(rnn_cell_fw, rnn_cell_bw, x, dtype=tf.float32)
-    return tf.matmul(outputs[-1], weights['out']) + biases['out']
+    return tf.matmul(outputs[-2], weights['out']) + biases['out']
 
 def initBeam():
     one_hot = tf.placeholder("float", [None])

@@ -12,3 +12,8 @@ def generateNewState(old_state, finger_pred, new_interval, normalization=True):
     else:
         return old_state[2:]+[finger_pred, new_interval]
     
+def generateNewStateBi(old_state, finger_pred, new_interval, normalization=True):
+    if normalization:
+        return old_state[2:-1] + [finger_pred/5.0, old_state[-1], new_interval]
+    else:
+        return old_state[2:-1] + [finger_pred, old_state[-1], new_interval]

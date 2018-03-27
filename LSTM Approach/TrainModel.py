@@ -10,8 +10,8 @@ from parameters import *
 logs_path = './logs'
 writer = tf.summary.FileWriter(logs_path)
 
-input_list = pickle.load(open("../Datasets/processed/train_input_list.pkl", "rb"))
-label_list = pickle.load(open("../Datasets/processed/train_label_list.pkl", "rb"))
+input_list = pickle.load(open("../Datasets/processed/train_input_list_4_bi.pkl", "rb"))
+label_list = pickle.load(open("../Datasets/processed/train_label_list_4_bi.pkl", "rb"))
 
 x, y, keep_prob, pred = initNet(BIRNN)
 
