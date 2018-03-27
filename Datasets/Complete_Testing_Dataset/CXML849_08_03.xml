@@ -4,7 +4,7 @@
   <identification>
     <encoding>
       <software>MuseScore 2.1.0</software>
-      <encoding-date>2018-03-21</encoding-date>
+      <encoding-date>2018-03-26</encoding-date>
       <supports element="accidental" type="yes"/>
       <supports element="beam" type="yes"/>
       <supports element="print" attribute="new-page" type="yes" value="yes"/>
@@ -57,10 +57,10 @@
       <print>
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
-            <right-margin>-0.00</right-margin>
+            <left-margin>-0.00</left-margin>
+            <right-margin>0.00</right-margin>
             </system-margins>
-          <top-system-distance>70.00</top-system-distance>
+          <top-system-distance>170.00</top-system-distance>
           </system-layout>
         </print>
       <attributes>
@@ -479,7 +479,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="877.11" default-y="-20.00">
+      <note default-x="877.12" default-y="-20.00">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -497,7 +497,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="910.24" default-y="-25.00">
+      <note default-x="910.25" default-y="-25.00">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -515,7 +515,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="943.37" default-y="-30.00">
+      <note default-x="943.38" default-y="-30.00">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -592,8 +592,8 @@
       <print new-system="yes">
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
-            <right-margin>-0.00</right-margin>
+            <left-margin>-0.00</left-margin>
+            <right-margin>0.00</right-margin>
             </system-margins>
           <system-distance>150.00</system-distance>
           </system-layout>
@@ -976,7 +976,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="722.92" default-y="-5.00">
+      <note default-x="722.93" default-y="-5.00">
         <pitch>
           <step>E</step>
           <octave>5</octave>
@@ -1179,8 +1179,8 @@
       <print new-system="yes">
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
-            <right-margin>-0.00</right-margin>
+            <left-margin>-0.00</left-margin>
+            <right-margin>0.00</right-margin>
             </system-margins>
           <system-distance>150.00</system-distance>
           </system-layout>
@@ -1563,7 +1563,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="722.92" default-y="30.00">
+      <note default-x="722.93" default-y="30.00">
         <pitch>
           <step>E</step>
           <octave>6</octave>
@@ -1766,8 +1766,8 @@
       <print new-system="yes">
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
-            <right-margin>-0.00</right-margin>
+            <left-margin>-0.00</left-margin>
+            <right-margin>0.00</right-margin>
             </system-margins>
           <system-distance>150.00</system-distance>
           </system-layout>
@@ -2150,7 +2150,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="722.92" default-y="10.00">
+      <note default-x="722.93" default-y="10.00">
         <pitch>
           <step>A</step>
           <octave>5</octave>
@@ -2353,8 +2353,8 @@
       <print new-system="yes">
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
-            <right-margin>-0.00</right-margin>
+            <left-margin>-0.00</left-margin>
+            <right-margin>0.00</right-margin>
             </system-margins>
           <system-distance>150.00</system-distance>
           </system-layout>
@@ -2755,7 +2755,7 @@
             </technical>
           </notations>
         </note>
-      <note default-x="428.55" default-y="-30.00">
+      <note default-x="428.56" default-y="-30.00">
         <pitch>
           <step>G</step>
           <octave>4</octave>
@@ -2877,7 +2877,7 @@
         <beam number="3">continue</beam>
         <notations>
           <technical>
-            <fingering>3</fingering>
+            <fingering>5</fingering>
             </technical>
           </notations>
         </note>
@@ -2895,7 +2895,7 @@
         <beam number="3">continue</beam>
         <notations>
           <technical>
-            <fingering>5</fingering>
+            <fingering>3</fingering>
             </technical>
           </notations>
         </note>
@@ -2913,7 +2913,7 @@
         <beam number="3">continue</beam>
         <notations>
           <technical>
-            <fingering>3</fingering>
+            <fingering>5</fingering>
             </technical>
           </notations>
         </note>
@@ -2931,7 +2931,7 @@
         <beam number="3">end</beam>
         <notations>
           <technical>
-            <fingering>5</fingering>
+            <fingering>3</fingering>
             </technical>
           </notations>
         </note>
@@ -2946,6 +2946,11 @@
         <voice>1</voice>
         <type>quarter</type>
         <stem>up</stem>
+        <notations>
+          <technical>
+            <fingering>1</fingering>
+            </technical>
+          </notations>
         </note>
       <note>
         <rest/>
@@ -2999,7 +3004,7 @@
       <print new-system="yes">
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
+            <left-margin>-0.00</left-margin>
             <right-margin>0.00</right-margin>
             </system-margins>
           <system-distance>150.00</system-distance>
@@ -3130,12 +3135,12 @@
         <voice>1</voice>
         </note>
       </measure>
-    <measure number="30" width="375.28">
+    <measure number="30" width="135.23">
       <print new-system="yes">
         <system-layout>
           <system-margins>
-            <left-margin>0.00</left-margin>
-            <right-margin>-0.00</right-margin>
+            <left-margin>-0.00</left-margin>
+            <right-margin>720.14</right-margin>
             </system-margins>
           <system-distance>150.00</system-distance>
           </system-layout>
@@ -3146,14 +3151,14 @@
         <voice>1</voice>
         </note>
       </measure>
-    <measure number="31" width="346.61">
+    <measure number="31" width="106.56">
       <note>
         <rest/>
         <duration>32</duration>
         <voice>1</voice>
         </note>
       </measure>
-    <measure number="32" width="355.61">
+    <measure number="32" width="115.56">
       <note>
         <rest/>
         <duration>32</duration>
