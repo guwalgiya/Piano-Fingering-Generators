@@ -2,6 +2,7 @@ import DataPreprocess
 def main(file_path, block_length, train=True, normalizaiton=True):
     input_list = []
     label_list = [] 
+    a = 0
     if train:
         book_interval, book_finger = DataPreprocess.main(file_path, True, normalizaiton)
         book_interval = remove_interval_greater_than_12(book_interval)
@@ -9,6 +10,8 @@ def main(file_path, block_length, train=True, normalizaiton=True):
             seq_input_list, seq_label_list = block_sequence_bi(book_interval[i], book_finger[i], block_length)
             input_list += seq_input_list
             label_list += seq_label_list
+            a += 1
+        print(a)
     else:
         book_interval, book_finger = DataPreprocess.main(file_path, False, normalizaiton)
         for song_interval in book_interval:
