@@ -33,7 +33,7 @@ def initBeam():
     _, top_2 = tf.nn.top_k(one_hot, 2)
     return one_hot, top_2
 
-def initNet(birnn=False):
+def createModel(birnn=False):
     # # tf Graph input
     # x = tf.placeholder("float", [None, N_INPUT, 1])
     # y = tf.placeholder("float", [None, FINGER_SIZE])
