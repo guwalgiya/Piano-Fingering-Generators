@@ -38,7 +38,7 @@ def inside_measure(measure): #used in measurefinder, measure = the measure we ar
         
         #if this element is a note
         if str(type(measure[i])) == "<class 'music21.note.Note'>": 
-            measure_midi.append((measure[i].midi,int(str(measure[i].articulations[0])[-2])))
+            measure_midi.append((measure[i].pitch.midi,int(str(measure[i].articulations[0])[-2])))
             
         #if this element is a chord
         elif str(type(measure[i])) == "<class 'music21.chord.Chord'>": 
@@ -46,7 +46,7 @@ def inside_measure(measure): #used in measurefinder, measure = the measure we ar
             
             #p = part
             for p in measure[i]:    
-                chordlist.append(p.midi)     #chordlist is the sub-list reprents a chord
+                chordlist.append(p.pitch.midi)     #chordlist is the sub-list reprents a chord
             
             #put the sublist into the midilist of this measure
             measure_midi.append([chordlist,6]) 
