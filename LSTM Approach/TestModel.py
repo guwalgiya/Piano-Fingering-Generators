@@ -64,8 +64,6 @@ for test_interval, test_finger in zip(input_list, label_list):
         test_step+=1
     temp_finger_res = [test_finger[-1]] + temp_finger_res
     print('number of notes: '+str(len(temp_finger_res)))
-    # print(len(test_finger[BLOCK_LENGTH-1:]))
-    # print(len(test_interval[BLOCK_LENGTH-1:]))
     absTrue, absFalse, notGood = EvaluatePhrase.main(test_interval[BLOCK_LENGTH-1:-1], temp_finger_res, test_finger[BLOCK_LENGTH-1:-1])
     total_absTrue += absTrue
     total_absFalse += absFalse

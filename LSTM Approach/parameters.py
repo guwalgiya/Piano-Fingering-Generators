@@ -8,3 +8,4 @@ N_HIDDEN = 256
 BLOCK_LENGTH = 4
 BIRNN = True
 CHECKPOINT_PATH = 'trained_models/cp.ckpt'
+LOG_PATH = 'logs/'

@@ -1,5 +1,4 @@
-import os
-
+import datetime
 import numpy as np
 import tensorflow as tf
 import pickle
@@ -21,8 +20,11 @@ cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=CHECKPOINT_PATH,
                                                  save_weights_only=True,
                                                  verbose=1)
 
+log_dir = LOG_PATH + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
 model = createModel(BIRNN)
 model.compile(optimizer=tf.keras.optimizers.Adam(0.001),
               loss=tf.keras.losses.CategoricalCrossentropy(),
               metrics=[tf.keras.metrics.CategoricalAccuracy()])
-model.fit(symbol_input, symbol_one_hot, epochs=10, batch_size=2, callbacks=[cp_callback])
+model.fit(symbol_input, symbol_one_hot, epochs=8, batch_size=2, callbacks=[cp_callback, tensorboard_callback])
