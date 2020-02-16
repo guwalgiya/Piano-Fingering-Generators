@@ -4,15 +4,16 @@ import pickle
 from music21 import pitch
 from parameters import BLOCK_LENGTH
 
-DATA_DIR = '../Datasets/JPDataset/'
+TRAIN_DATA_DIR = '../Datasets/JPDataset/Train'
+TEST_DATA_DIR = '../Datasets/JPDataset/Test'
 
 # make it as [finger, interval, finger, interval, etc]
 def toOldTrainFormat():
     train_input_list = []
     train_label_list = []
-    for _,_, filenames in os.walk(DATA_DIR):
+    for _,_, filenames in os.walk(TRAIN_DATA_DIR):
         for filename in sorted(filenames):
-            with open(DATA_DIR+filename) as finger_file:
+            with open(TRAIN_DATA_DIR+filename) as finger_file:
                 finger_reader = csv.reader(finger_file)
                 pre_finger = -1
                 pre_note = -1
@@ -41,9 +42,9 @@ def toOldTrainFormat():
 def toOldTestFormat():
     test_input_list = []
     test_label_list = []
-    for _, _, filenames in os.walk(DATA_DIR):
+    for _, _, filenames in os.walk(TEST_DATA_DIR):
         for filename in sorted(filenames):
-            with open(DATA_DIR+filename) as finger_file:
+            with open(TEST_DATA_DIR+filename) as finger_file:
                 finger_reader = csv.reader(finger_file)
                 temp_interval_list = []
                 temp_finger_list = []
