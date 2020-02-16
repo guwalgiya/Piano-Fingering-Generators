@@ -10,13 +10,13 @@ DATA_DIR = '../Datasets/JPDataset/'
 def toOldTrainFormat():
     train_input_list = []
     train_label_list = []
-    temp_list = []
     for _,_, filenames in os.walk(DATA_DIR):
         for filename in sorted(filenames):
             with open(DATA_DIR+filename) as finger_file:
                 finger_reader = csv.reader(finger_file)
                 pre_finger = -1
                 pre_note = -1
+                temp_list = []
                 while pre_finger < 0: 
                     first_line = finger_reader.__next__()
                     pre_note = pitch.Pitch(first_line[3]).ps
