@@ -6,8 +6,8 @@ import pickle
 from LSTM_network import createModel
 from parameters import *
 
-input_list = pickle.load(open("../Datasets/processed/train_input_list_4_bi.pkl", "rb"))
-label_list = pickle.load(open("../Datasets/processed/train_label_list_4_bi.pkl", "rb"))
+input_list = pickle.load(open("../Datasets/processed/train_input_list_4_bi_extra.pkl", "rb"))
+label_list = pickle.load(open("../Datasets/processed/train_label_list_4_bi_extra.pkl", "rb"))
 
 input_list = np.asarray(input_list, dtype=float)
 label_list = np.asarray(label_list)
