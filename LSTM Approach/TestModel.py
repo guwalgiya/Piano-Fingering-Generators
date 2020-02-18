@@ -4,10 +4,11 @@ import pickle
 import EvaluatePhrase
 from LSTM_network import createModel, initBeam
 from Utils import generateNewState, generateNewStateBi
+from JPDataPreProcessing import TEST_INPUT_PATH, TEST_LABEL_PATH
 from parameters import *
 
-input_list = pickle.load(open("../Datasets/processed/test_input_list.pkl", "rb"))
-label_list = pickle.load(open("../Datasets/processed/test_label_list.pkl", "rb"))
+input_list = pickle.load(open(TEST_INPUT_PATH, "rb"))
+label_list = pickle.load(open(TEST_LABEL_PATH, "rb"))
 
 model = createModel(BIRNN)
 model.load_weights(CHECKPOINT_PATH)
