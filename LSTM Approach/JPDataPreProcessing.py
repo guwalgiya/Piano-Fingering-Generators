@@ -69,8 +69,9 @@ def toOldTestFormat(filenames):
                     temp_interval_list.append(current_note - pre_note)
                     pre_note = current_note
                     temp_finger_list.append(pre_finger)
-                    pre_finger = current_finger
+                    pre_finger = current_finger        
             test_input_list.append(list(temp_interval_list))
+            temp_finger_list.append(current_finger)
             test_label_list.append(list(temp_finger_list))
             temp_interval_list.clear()
             temp_finger_list.clear()           
