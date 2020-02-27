@@ -2,26 +2,27 @@ import csv
 import os
 import random
 import pickle
+import numpy as np
 from music21 import pitch
 from parameters import BLOCK_LENGTH
 
 DATA_DIR = '../Datasets/JPDataset/'
 SPLIT_RATIO = 0.75 # ratio of train data
 
-def shuffleDataset(split_ratio):
-    for _, _, filenames in os.walk(DATA_DIR):
+def shuffleDataset(split_ratio, data_dir):
+    for _, _, filenames in os.walk(data_dir):
         random.shuffle(filenames)
         num_train_files = int(len(filenames) * split_ratio)
         train_files = filenames[:num_train_files]
         test_files = filenames[num_train_files:]
-        return train_files, test_files
+        return train_files, test_files        
 
 # make it as [finger, interval, finger, interval, etc]
-def toOldTrainFormat(filenames):
+def toOldTrainFormat(filenames, data_dir):
     train_input_list = []
     train_label_list = []
     for filename in sorted(filenames):
-        with open(DATA_DIR+filename) as finger_file:
+        with open(data_dir+filename) as finger_file:
             finger_reader = csv.reader(finger_file)
             pre_finger = -1
             pre_note = -1
@@ -48,11 +49,11 @@ def toOldTrainFormat(filenames):
     return train_input_list, train_label_list
 
 # make input_list as all intervals and test_label as all fingers
-def toOldTestFormat(filenames):
+def toOldTestFormat(filenames, data_dir):
     test_input_list = []
     test_label_list = []
     for filename in sorted(filenames):
-        with open(DATA_DIR+filename) as finger_file:
+        with open(data_dir+filename) as finger_file:
             finger_reader = csv.reader(finger_file)
             temp_interval_list = []
             temp_finger_list = []
@@ -77,17 +78,45 @@ def toOldTestFormat(filenames):
             temp_finger_list.clear()           
     return test_input_list, test_label_list
 
+def toVectorFormat(filenames, data_dir):
+    train_input_list = []
+    train_label_list = []
+    for filename in sorted(filenames):
+        with open(data_dir + filename, r) as finger_file:
+            finger_reader = csv.reader(finger_file)
+            finger_list = []
+            note_list = []
+            accidental_list = []
+            for row in finger_reader:
+                current_finger = int(row[-1].split('_')[0])
+                current_note = pitch.Pitch(row[3]).ps
+                borw =int(pitch.Pitch(row[3]).accidental == None)
+                if current_finger > 0:
+                    finger_list.append(current_finger)
+                    note_list.append(current_note)
+                    accidental_list.append(borw)
+            interval_list = np.diff(np.array(note_list, dtype=int))
+
+            vector_list = [[f, i, bw_s, bw_e] for f, i, bw_s, bw_e in zip(finger_list[:-1], interval_list, accidental_list[:-1], accidental_list[1:])]
+            
+            train_input, train_label = slide_window(vector_list, window_size = 5)
+            train_input_list.extend(train_input)
+            train_label_list.extend(train_label)
+                 
+                    
+
+
 def saveDataToPickle(train_input_list, train_label_list, input_path, label_path):
     pickle.dump(train_input_list, open(input_path, 'wb'))
     pickle.dump(train_label_list, open(label_path, 'wb'))
 
-train_files, test_files = shuffleDataset(SPLIT_RATIO)
+train_files, test_files = shuffleDataset(SPLIT_RATIO, DATA_DIR)
 TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_bi_extra.pkl'
 TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_bi_extra.pkl'
-train_input_list, train_label_list = toOldTrainFormat(train_files)
+train_input_list, train_label_list = toOldTrainFormat(train_files, DATA_DIR)
 saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
 
 TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_bi_extra.pkl'
 TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_bi_extra.pkl'
-test_input_list, test_label_list = toOldTestFormat(test_files)
+test_input_list, test_label_list = toOldTestFormat(test_files, DATA_DIR)
 saveDataToPickle(test_input_list, test_label_list, TEST_INPUT_PATH, TEST_LABEL_PATH)
