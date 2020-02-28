@@ -18,7 +18,6 @@ def generateNewStateBi(old_state, finger_pred, new_interval, normalization=True)
     else:
         return old_state[2:-1] + [finger_pred, old_state[-1], new_interval]
 
-def slide_window(input_list, window_size):
-    train_input = []
-    train_label = []
-    return train_input, train_label
+def slide_window_gen(input_list, window_size):
+    for start in range(len(input_list) - window_size + 1):
+        yield input_list[start : start + window_size]
