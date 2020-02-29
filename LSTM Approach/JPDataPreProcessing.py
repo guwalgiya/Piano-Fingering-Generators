@@ -80,6 +80,7 @@ def toOldTestFormat(filenames, data_dir):
             temp_finger_list.clear()           
     return test_input_list, test_label_list
 
+# train_input_list has shape: [[f, i, b/w, b/w], [f, i, b/w, b/w], ...], train_label_list has shape: [f, f, f....]
 def toVectorTrainFormat(filenames, data_dir):
     train_input_list = []
     train_label_list = []
@@ -103,9 +104,38 @@ def toVectorTrainFormat(filenames, data_dir):
             train_label_list.extend([f for f in finger_list[BLOCK_LENGTH:]])
     return train_input_list, train_label_list
 
+
+# for each file, test_input has shape: [[i, b/w, b/w], ...], test_label has shape: [f, f, f, f....]
+def toVectorTestFormat(filenames, data_dir):
+    test_input_list = []
+    test_label_list = []
+    for filename in sorted(filenames):
+        with open(data_dir + filename, 'r') as finger_file:
+            finger_reader = csv.reader(finger_file)
+            finger_list = []
+            note_list = []
+            accidental_list = []
+            for row in finger_reader:
+                current_finger = int(row[-1].split('_')[0])
+                current_note = pitch.Pitch(row[3]).ps
+                borw =int(pitch.Pitch(row[3]).accidental == None)
+                if current_finger > 0:
+                    finger_list.append(current_finger)
+                    note_list.append(current_note)
+                    accidental_list.append(borw)
+            interval_list = np.diff(np.array(note_list, dtype=int)).tolist()
+            vector_list = [[i, bw_s, bw_e] for i, bw_s, bw_e in zip(interval_list, accidental_list[:-1], accidental_list[1:])]
+            test_input_list.append(vector_list)
+            test_label_list.append(finger_list)
+    return test_input_list, test_label_list
+
 def saveDataToPickle(train_input_list, train_label_list, input_path, label_path):
     pickle.dump(train_input_list, open(input_path, 'wb'))
     pickle.dump(train_label_list, open(label_path, 'wb'))
+
+def saveSplitsToPickle(train_files, test_files, train_path, test_path):
+    pickle.dump(train_files, open(train_path, 'wb'))
+    pickle.dump(test_files, open(test_path, 'wb'))
 
 train_files, test_files = shuffleDataset(SPLIT_RATIO, DATA_DIR)
 

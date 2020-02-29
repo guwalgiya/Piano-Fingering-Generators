@@ -10,8 +10,8 @@ def initBeam():
 def createModel(birnn=False):
     model = tf.keras.Sequential()
     if birnn:
-        model.add(layers.LSTM(N_HIDDEN))
-    else:
         model.add(layers.Bidirectional(layers.LSTM(N_HIDDEN)))
+    else:
+        model.add(layers.LSTM(N_HIDDEN))
     model.add(layers.Dense(FINGER_SIZE, activation='softmax'))
     return model
