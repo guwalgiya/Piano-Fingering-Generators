@@ -138,6 +138,10 @@ def saveSplitsToPickle(train_files, test_files, train_path, test_path):
     pickle.dump(test_files, open(test_path, 'wb'))
 
 train_files, test_files = shuffleDataset(SPLIT_RATIO, DATA_DIR)
+TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
+TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
+train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
+saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
 
 # TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_bi_extra.pkl'
 # TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_bi_extra.pkl'
