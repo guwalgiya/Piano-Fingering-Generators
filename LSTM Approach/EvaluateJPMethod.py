@@ -1,6 +1,6 @@
 import os
-from JPDataPreProcessing import toOldTestFormat
-from EvaluatePhrase import main
+from JPDataPreProcessing import toOldTestFormat, getBwList
+from EvaluateVectorPhrase import main
 
 GT_DIR = '../Datasets/JPDataset/'
 EST_DIR = '../Datasets/JPESTResults/'
@@ -15,12 +15,13 @@ def getFileNames():
 
 def evaluate(gt_filenames, est_filenames):
     interval_list, gt_finger_list = toOldTestFormat(gt_filenames, GT_DIR)
+    bw_list = getBwList(gt_filenames, GT_DIR)
     _, est_finger_list = toOldTestFormat(est_filenames, EST_DIR)
     total_true = 0
     total_false = 0
     total_nideal = 0
     for interval, est_finger, gt_finger in zip(interval_list, est_finger_list, gt_finger_list):
-        num_abs_true, num_abs_false, num_not_good = main(interval, est_finger, gt_finger)
+        num_abs_true, num_abs_false, num_not_good = main(interval, est_finger, bw_list, gt_finger)
         total_true += float(num_abs_true) / len(gt_finger)
         total_false += float(num_abs_false) / len(gt_finger)
         total_nideal += float(num_not_good) / len(gt_finger)

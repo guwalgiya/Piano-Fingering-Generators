@@ -18,6 +18,9 @@ def generateNewStateBi(old_state, finger_pred, new_interval, normalization=True)
     else:
         return old_state[2:-1] + [finger_pred, old_state[-1], new_interval]
 
+def generateNewVecState(old_state, finger_pred, new_vec):
+    return old_state[1:] + [[finger_pred]+new_vec]     
+
 def slide_window_gen(input_list, window_size):
     for start in range(len(input_list) - window_size + 1):
         yield input_list[start : start + window_size]

@@ -129,6 +129,23 @@ def toVectorTestFormat(filenames, data_dir):
             test_label_list.append(finger_list)
     return test_input_list, test_label_list
 
+def getBwList(filenames, data_dir):
+    bw_list = []
+    for filename in sorted(filenames):
+        with open(data_dir + filename, 'r') as finger_file:
+            finger_reader = csv.reader(finger_file)
+            accidental_list = []
+            for row in finger_reader:
+                current_finger = int(row[-1].split('_')[0])
+                borw =int(pitch.Pitch(row[3]).accidental == None)
+                if current_finger > 0:
+                    accidental_list.append(borw)
+            bw_s = accidental_list[:-1]
+            bw_e = accidental_list[1:]
+            for s, e in zip(bw_s, bw_e):
+                bw_list.append([s, e])
+    return bw_list
+
 def saveDataToPickle(train_input_list, train_label_list, input_path, label_path):
     pickle.dump(train_input_list, open(input_path, 'wb'))
     pickle.dump(train_label_list, open(label_path, 'wb'))
@@ -138,17 +155,19 @@ def saveSplitsToPickle(train_files, test_files, train_path, test_path):
     pickle.dump(test_files, open(test_path, 'wb'))
 
 train_files, test_files = shuffleDataset(SPLIT_RATIO, DATA_DIR)
-TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
-TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
-train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
-saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
+# TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
+# TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
+# train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
+# saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
 
 # TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_bi_extra.pkl'
 # TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_bi_extra.pkl'
 # train_input_list, train_label_list = toOldTrainFormat(train_files, DATA_DIR)
 # saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
 
-# TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_bi_extra.pkl'
-# TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_bi_extra.pkl'
-# test_input_list, test_label_list = toOldTestFormat(test_files, DATA_DIR)
-# saveDataToPickle(test_input_list, test_label_list, TEST_INPUT_PATH, TEST_LABEL_PATH)
+TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_vector.pkl'
+TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_vector.pkl'
+test_input_list, test_label_list = toVectorTestFormat(test_files, DATA_DIR)
+# for test_input in test_input_list:
+#     print(test_input[0])
+saveDataToPickle(test_input_list, test_label_list, TEST_INPUT_PATH, TEST_LABEL_PATH)
