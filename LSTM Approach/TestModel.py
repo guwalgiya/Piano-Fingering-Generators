@@ -1,7 +1,7 @@
+import pickle
 import numpy as np
 import tensorflow as tf
-import pickle
-import EvaluatePhrase
+import EvaluateInterLeavedPhrase
 from LSTM_network import createModel, initBeam
 from Utils import generateNewState, generateNewStateBi
 from JPDataPreProcessing import TEST_INPUT_PATH, TEST_LABEL_PATH
@@ -65,7 +65,7 @@ for test_interval, test_finger in zip(input_list, label_list):
         test_step+=1
     temp_finger_res = [test_finger[-1]] + temp_finger_res
     print('number of notes: '+str(len(temp_finger_res)))
-    absTrue, absFalse, notGood = EvaluatePhrase.main(test_interval[BLOCK_LENGTH-1:-1], temp_finger_res, test_finger[BLOCK_LENGTH-1:-1])
+    absTrue, absFalse, notGood = EvaluateInterLeavedPhrase.main(test_interval[BLOCK_LENGTH-1:-1], temp_finger_res, test_finger[BLOCK_LENGTH-1:-1])
     total_absTrue += absTrue
     total_absFalse += absFalse
     total_notGood += notGood

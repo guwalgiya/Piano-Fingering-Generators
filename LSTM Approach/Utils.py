@@ -1,3 +1,7 @@
+import os
+import random
+import pickle
+
 def elapsed(sec):
     if sec<60:
         return str(sec) + " sec"
@@ -5,6 +9,20 @@ def elapsed(sec):
         return str(sec/60) + " min"
     else:
         return str(sec/(60*60)) + " hr"
+
+def shuffleDataset(split_ratio, data_dir):
+    for _, _, filenames in os.walk(data_dir):
+        random.shuffle(filenames)
+        num_train_files = int(len(filenames) * split_ratio)
+        train_files = filenames[:num_train_files]
+        test_files = filenames[num_train_files:]
+        return train_files, test_files
+
+def saveToPickle(data, path):
+    pickle.dump(data, open(path, 'wb'))
+
+def loadFromPickle(data_path):
+    return pickle.load(open(data_path, "rb"))
 
 def generateNewState(old_state, finger_pred, new_interval, normalization=True):
     if normalization:

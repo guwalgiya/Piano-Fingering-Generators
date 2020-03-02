@@ -1,26 +1,13 @@
 import csv
 import os
-import random
 import pickle
 import numpy as np
 from music21 import pitch
 from parameters import BLOCK_LENGTH
 from Utils import slide_window_gen
 
-
-DATA_DIR = '../Datasets/JPDataset/'
-SPLIT_RATIO = 0.75 # ratio of train data
-
-def shuffleDataset(split_ratio, data_dir):
-    for _, _, filenames in os.walk(data_dir):
-        random.shuffle(filenames)
-        num_train_files = int(len(filenames) * split_ratio)
-        train_files = filenames[:num_train_files]
-        test_files = filenames[num_train_files:]
-        return train_files, test_files        
-
 # make it as [finger, interval, finger, interval, etc]
-def toOldTrainFormat(filenames, data_dir):
+def toInterleavedTrainFormat(filenames, data_dir):
     train_input_list = []
     train_label_list = []
     for filename in sorted(filenames):
@@ -51,7 +38,7 @@ def toOldTrainFormat(filenames, data_dir):
     return train_input_list, train_label_list
 
 # make input_list as all intervals and test_label as all fingers
-def toOldTestFormat(filenames, data_dir):
+def toInterleavedTestFormat(filenames, data_dir):
     test_input_list = []
     test_label_list = []
     for filename in sorted(filenames):
@@ -145,29 +132,3 @@ def getBwList(filenames, data_dir):
             for s, e in zip(bw_s, bw_e):
                 bw_list.append([s, e])
     return bw_list
-
-def saveDataToPickle(train_input_list, train_label_list, input_path, label_path):
-    pickle.dump(train_input_list, open(input_path, 'wb'))
-    pickle.dump(train_label_list, open(label_path, 'wb'))
-
-def saveSplitsToPickle(train_files, test_files, train_path, test_path):
-    pickle.dump(train_files, open(train_path, 'wb'))
-    pickle.dump(test_files, open(test_path, 'wb'))
-
-train_files, test_files = shuffleDataset(SPLIT_RATIO, DATA_DIR)
-# TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
-# TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
-# train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
-# saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
-
-# TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_bi_extra.pkl'
-# TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_bi_extra.pkl'
-# train_input_list, train_label_list = toOldTrainFormat(train_files, DATA_DIR)
-# saveDataToPickle(train_input_list, train_label_list, TRAIN_INPUT_PATH, TRAIN_LABEL_PATH)
-
-TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_vector.pkl'
-TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_vector.pkl'
-test_input_list, test_label_list = toVectorTestFormat(test_files, DATA_DIR)
-# for test_input in test_input_list:
-#     print(test_input[0])
-saveDataToPickle(test_input_list, test_label_list, TEST_INPUT_PATH, TEST_LABEL_PATH)
