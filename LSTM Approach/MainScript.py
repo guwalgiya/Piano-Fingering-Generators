@@ -1,5 +1,5 @@
 from Utils import shuffleDataset, saveToPickle, loadFromPickle
-from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat
+from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat, toInterleavedTrainFormat
 from TrainModel import trainModel
 from TestVectorModel import loadModel, testVecModel
 
@@ -16,6 +16,7 @@ test_files = loadFromPickle('../Datasets/processed/test_filenames.pkl')
 
 # process raw data to desired shape
 print('preprocessing raw train data')
+# train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
 TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
 TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
 train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
