@@ -2,6 +2,7 @@ from Utils import shuffleDataset, saveToPickle, loadFromPickle
 from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat, toInterleavedTrainFormat
 from TrainModel import trainModel
 from TestVectorModel import loadModel, testVecModel
+from EvaluateJPMethod import evaluate
 
 DATA_DIR = '../Datasets/JPDataset/'
 # # prepare raw training set and testing set
@@ -33,5 +34,6 @@ trainModel(train_input_list, train_label_list, num_epochs=20, batch_size=20)
 # Test the network
 model = loadModel()
 testVecModel(test_input_list, test_label_list, model)
-
+# Evaluate JP hmm method with same test_files
+evaluate(test_files, DATA_DIR, '../Datasets/JPESTResults/selfTrained/FHMM2/')
 

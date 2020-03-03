@@ -4,14 +4,14 @@ import tensorflow as tf
 import EvaluateVectorPhrase
 from LSTM_network import createModel, initBeam
 from Utils import generateNewVecState
-from parameters import *
+from parameters import BLOCK_LENGTH, BIRNN, CHECKPOINT_PATH
 
 def loadModel():
     model = createModel(BIRNN)
     model.load_weights(CHECKPOINT_PATH)
     return model
 
-def testVecModel(input_list, label_list, model):
+def testVecModel(input_list, label_list, model, verbose=False):
     total_absTrue = 0
     total_absFalse = 0
     total_notGood = 0
@@ -30,7 +30,6 @@ def testVecModel(input_list, label_list, model):
                 init_state = generateNewVecState(init_state, finger_pred, test_vector[test_step+BLOCK_LENGTH])
 
         temp_finger_res = [test_finger[-1]] + temp_finger_res
-        print('number of notes: '+str(len(temp_finger_res)))
         test_interval = [vec[0] for vec in test_vector]
         test_bw = [[vec[1], vec[2]] for vec in test_vector]
         absTrue, absFalse, notGood = EvaluateVectorPhrase.main(test_interval[BLOCK_LENGTH-1:-1], temp_finger_res, test_bw[BLOCK_LENGTH-1:-1], test_finger[BLOCK_LENGTH-1:-1])
@@ -38,7 +37,9 @@ def testVecModel(input_list, label_list, model):
         total_absFalse += absFalse
         total_notGood += notGood
         total_interval_len += (num_intervals - (BLOCK_LENGTH-1))
-        print('absolute acc: ' + str(absTrue), 'absolute wrong: ' + str(absFalse), 'not ideal: ' + str(notGood))
+        if verbose:
+            print('number of notes: '+str(len(temp_finger_res)))
+            print('absolute acc: ' + str(absTrue), 'absolute wrong: ' + str(absFalse), 'not ideal: ' + str(notGood))
 
     print('absolute acc: ' + str(total_absTrue/float(total_interval_len+len(input_list))), \
             'absolute false: ' + str(total_absFalse/float(total_interval_len)), \
