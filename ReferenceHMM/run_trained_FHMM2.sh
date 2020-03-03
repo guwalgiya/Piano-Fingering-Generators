@@ -8,5 +8,5 @@ fi
 Infile=$1
 Outfile=$2
 
-./Binary/FingeringHMM2_Run ./Params/hmm2_param.txt ${Infile} ${Outfile} 0.556 0.407 0.474 -5
+./SourceCode/Binary/FingeringHMM2_Run ./Params/hmm2_param.txt ${Infile} ${Outfile} 0.556 0.407 0.474 -5
 

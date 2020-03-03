@@ -1,9 +1,10 @@
 from music21 import articulations, note, musicxml, stream
-n1 = note.Note('D#4')
-n1.articulations.append(articulations.Fingering(4))
-sc = stream.Score()
-sc.append(n1)
-GEX = musicxml.m21ToXml.GeneralObjectExporter()
-m = GEX.fromScore(sc)
-with open('test.xml', 'wb') as xml:
-    xml.write(GEX.parse(m))
+def generateScoreGivenLists(note_list, finger_list, score_name):
+    sc = stream.Score()
+    for n, f in zip(note_list, finger_list):
+        n_m21 = note.Note(n)
+        n_m21.articulations.append(articulations.Fingering(f))
+    GEX = musicxml.m21ToXml.GeneralObjectExporter()
+    m = GEX.fromScore(sc)
+    with open(score_name+'.xml', 'wb') as xml:
+        xml.write(GEX.parse(m))

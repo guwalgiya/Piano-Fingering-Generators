@@ -2,7 +2,7 @@ import subprocess
 import os
 import pickle
 
-INPUT_DIR = './FingeringFiles/'
+INPUT_DIR = './SourceCode/FingeringFiles/'
 OUTPUT_DIR = './ESTResults/'
 
 FHMM1 = 'FHMM1'
@@ -19,6 +19,9 @@ def getFormattedTestFilenames():
     test_filenames = pickle.load(open("./test_filenames.pkl", "rb"))
     test_filenames = [filename.replace('csv', 'txt') for filename in test_filenames]
     return test_filenames
+
+def trainHmm():
+    subprocess.call(['./train_hmm.sh'])
 
 def runHmm(filenames, hmm_type, default=False):
     for filename in filenames:
