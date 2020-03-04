@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 import tensorflow as tf
 import EvaluateInterLeavedPhrase
-from LSTM_network import createModel, initBeam
+from NNModel import createBiDirectionModel
 from Utils import generateNewState, generateNewStateBi
 from JPDataPreProcessing import TEST_INPUT_PATH, TEST_LABEL_PATH
 from parameters import *
@@ -10,7 +10,7 @@ from parameters import *
 input_list = pickle.load(open(TEST_INPUT_PATH, "rb"))
 label_list = pickle.load(open(TEST_LABEL_PATH, "rb"))
 
-model = createModel(BIRNN)
+model = createBiDirectionModel()
 model.load_weights(CHECKPOINT_PATH)
 
 total_absTrue = 0

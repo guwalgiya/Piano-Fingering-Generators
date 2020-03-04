@@ -2,12 +2,12 @@ import pickle
 import numpy as np
 import tensorflow as tf
 import EvaluateVectorPhrase
-from LSTM_network import createModel, initBeam
+from NNModel import createBiDirectionModel
 from Utils import generateNewVecState
-from parameters import BLOCK_LENGTH, BIRNN, CHECKPOINT_PATH
+from parameters import BLOCK_LENGTH, CHECKPOINT_PATH
 
 def loadModel():
-    model = createModel(BIRNN)
+    model = createBiDirectionModel()
     model.load_weights(CHECKPOINT_PATH)
     return model
 

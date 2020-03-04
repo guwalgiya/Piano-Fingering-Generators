@@ -1,7 +1,7 @@
 import datetime
 import numpy as np
 import tensorflow as tf
-from LSTM_network import createModel
+from NNModel import createBiDirectionModel
 from parameters import FINGER_SIZE, CHECKPOINT_PATH, LOG_PATH, BIRNN
 
 def trainModel(input_list, label_list, num_epochs, batch_size):
@@ -20,7 +20,7 @@ def trainModel(input_list, label_list, num_epochs, batch_size):
     log_dir = LOG_PATH + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
-    model = createModel(BIRNN)
+    model = createBiDirectionModel()
     model.compile(optimizer=tf.keras.optimizers.Adam(0.001),
                 loss=tf.keras.losses.CategoricalCrossentropy(),
                 metrics=[tf.keras.metrics.CategoricalAccuracy()])
