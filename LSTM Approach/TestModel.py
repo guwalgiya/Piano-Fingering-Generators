@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 import tensorflow as tf
 import EvaluateInterLeavedPhrase
-from NNModel import createBiDirectionModel
+from NNModelFactory import createBiDirectionModel
 from Utils import generateNewState, generateNewStateBi
 from JPDataPreProcessing import TEST_INPUT_PATH, TEST_LABEL_PATH
 from parameters import *

@@ -2,12 +2,13 @@ import pickle
 import numpy as np
 import tensorflow as tf
 import EvaluateVectorPhrase
-from NNModel import createBiDirectionModel
+from NNModelFactory import createBiDirectionModel, createSimpleAttentionModel
 from Utils import generateNewVecState
 from parameters import BLOCK_LENGTH, CHECKPOINT_PATH
 
 def loadModel():
-    model = createBiDirectionModel()
+    # model = createBiDirectionModel()
+    model = createSimpleAttentionModel()
     model.load_weights(CHECKPOINT_PATH)
     return model
 

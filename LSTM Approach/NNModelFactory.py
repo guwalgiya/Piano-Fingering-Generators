@@ -1,5 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras import layers
+from AttentionModel import SimpleAttentionModel
 from parameters import N_HIDDEN, FINGER_SIZE
 
 def createUniDirectionModel():
@@ -16,3 +17,5 @@ def createBiDirectionModel():
     model.add(layers.Dense(FINGER_SIZE, activation='softmax'))
     return model
     
+def createSimpleAttentionModel():
+    return SimpleAttentionModel(rnn_hidden_size=N_HIDDEN, dense_hidden_size=N_HIDDEN)
