@@ -13,17 +13,17 @@ DATA_DIR = '../Datasets/JPDataset/'
 # use previosly splited train/test set
 
 ## Training related
-# print('loading train filenames')
-# train_files = loadFromPickle('../Datasets/processed/train_filenames.pkl')
-# print('preprocessing raw train data')
-# # train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
-# TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
-# TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
-# train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
+print('loading train filenames')
+train_files = loadFromPickle('../Datasets/processed/train_filenames.pkl')
+print('preprocessing raw train data')
+# train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
+TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
+TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
+train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
 # saveToPickle(train_input_list, TRAIN_INPUT_PATH)
 # saveToPickle(train_label_list, TRAIN_LABEL_PATH)
 # Train the network
-# trainModel(train_input_list, train_label_list, num_epochs=30, batch_size=20)
+trainModel(train_input_list, train_label_list, num_epochs=8, batch_size=20)
 
 ## Testing related
 print('loading train filenames')
