@@ -38,8 +38,8 @@ def testVecModelEval(input_list, label_list, model, verbose=False):
         total_notGood += notGood
         total_interval_len += (num_intervals - (BLOCK_LENGTH-1))
         if verbose:
-            print('number of notes: '+str(len(temp_finger_res)))
-            print('absolute acc: ' + str(absTrue), 'absolute wrong: ' + str(absFalse), 'not ideal: ' + str(notGood))
+            num_note = float(len(temp_finger_res))
+            print(f'absolute acc: {absTrue / num_note}, absolute false: {absFalse / num_note}, not ideal: {notGood / num_note}')
 
     abs_acc = total_absTrue/float(total_interval_len+len(input_list))
     abs_false = total_absFalse/float(total_interval_len)
