@@ -13,9 +13,6 @@ def createUniDirectionModel():
 def createBiDirectionModel():
     model = tf.keras.Sequential()
     model.add(layers.Bidirectional(layers.LSTM(N_HIDDEN)))
-    model.add(layers.Dropout(0.1))
+    # model.add(layers.Dropout(0.1))
     model.add(layers.Dense(FINGER_SIZE, activation='softmax'))
     return model
-    
-def createSimpleAttentionModel():
-    return SimpleAttentionModel(rnn_hidden_size=N_HIDDEN, dense_hidden_size=N_HIDDEN)

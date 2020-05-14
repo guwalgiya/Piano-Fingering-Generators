@@ -2,17 +2,16 @@ import pickle
 import numpy as np
 import tensorflow as tf
 import EvaluateVectorPhrase
-from NNModelFactory import createBiDirectionModel, createSimpleAttentionModel
+from NNModelFactory import createBiDirectionModel
 from Utils import generateNewVecState
 from parameters import BLOCK_LENGTH, CHECKPOINT_PATH
 
 def loadModel():
-    # model = createBiDirectionModel()
-    model = createSimpleAttentionModel()
+    model = createBiDirectionModel()
     model.load_weights(CHECKPOINT_PATH)
     return model
 
-def testVecModel(input_list, label_list, model, verbose=False):
+def testVecModelEval(input_list, label_list, model, verbose=False):
     total_absTrue = 0
     total_absFalse = 0
     total_notGood = 0
@@ -47,3 +46,19 @@ def testVecModel(input_list, label_list, model, verbose=False):
     not_ideal = total_notGood/float(total_interval_len)
     print('absolute acc: {}, absolute false: {}, not ideal: {}'.format(abs_acc, abs_false, not_ideal))
     return abs_acc, abs_false, not_ideal
+
+def testVecModelSave(input_list, label_list, model):
+    for test_vector, test_finger in zip(input_list, label_list):
+        init_state = [[test_finger[i]]+test_vector[i] for i in range(BLOCK_LENGTH)]
+        num_intervals = len(test_vector)
+        temp_finger_res = []
+        for test_step in range(0, num_intervals - BLOCK_LENGTH + 1):
+            np_init_state = np.reshape(np.asarray(init_state, dtype=float), (-1, BLOCK_LENGTH, 4))
+            pred_prob = model.predict(np_init_state)
+            finger_pred = int(tf.math.argmax(pred_prob, 1)) + 1
+            temp_finger_res += [finger_pred]
+            if test_step < num_intervals - BLOCK_LENGTH - 1:
+                init_state = generateNewVecState(init_state, finger_pred, test_vector[test_step+BLOCK_LENGTH])
+        temp_finger_res = test_finger[0:BLOCK_LENGTH] + temp_finger_res
+    return temp_finger_res
+    

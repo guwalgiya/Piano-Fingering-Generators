@@ -10,6 +10,15 @@ def elapsed(sec):
     else:
         return str(sec/(60*60)) + " hr"
 
+def SplitJPData(data_dir, hmm_res_dir):
+    for _, _, filenames in os.walk(data_dir):
+        filenames_ = sorted(filenames)
+        test_files = filenames_[0:150]
+        train_files = filenames_[150:]
+    for _, _, filenames in os.walk(hmm_res_dir):
+        hmm_res_files = sorted(filenames)
+    return train_files, test_files, hmm_res_files
+
 def shuffleDataset(split_ratio, data_dir):
     for _, _, filenames in os.walk(data_dir):
         random.shuffle(filenames)
