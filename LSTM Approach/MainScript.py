@@ -1,8 +1,8 @@
 from Utils import shuffleDataset, SplitJPData, saveToPickle, loadFromPickle, SplitDataExcludeBachTestOnMozart
-from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat, toInterleavedTrainFormat
+from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat, toInterleavedTrainFormat, toVectorFutureTrainFormat
 from TrainModel import trainModel
-from TestVectorModel import loadModel, testVecModelSave, testVecModelEval
-from EvaluateJPMethod import evaluate_yz, evaluate_jp
+from TestVectorModel import loadModel, testVecModelSave, testVecModelEval, testVecFutureModelSave
+from EvaluateJPMethod import evaluate_yz, evaluate_jp, evaluate_yz_single
 import statistics
 from JPDataPreProcessing import getListsFromSingeFile
 import numpy as np
@@ -17,31 +17,38 @@ HMM_RES_DIR = '../Datasets/JPResDataset/'
 # train_files, test_files, hmm_res_files = SplitJPData(DATA_DIR, HMM_RES_DIR)
 train_files, test_files = SplitDataExcludeBachTestOnMozart(DATA_DIR)
 
-# # Training related
-# # print('loading train filenames')
-# # train_files = loadFromPickle('../Datasets/processed/train_filenames.pkl')
-# print('preprocessing raw train data')
-# # train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
+# Training related
+# print('loading train filenames')
+# train_files = loadFromPickle('../Datasets/processed/train_filenames.pkl')
+print('preprocessing raw train data')
+# train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
+# train_input_list, train_label_list = toVectorFutureTrainFormat(train_files, DATA_DIR)
+# print(len(train_label_list))
 # train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
-# # TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
-# # TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
-# # saveToPickle(train_input_list, TRAIN_INPUT_PATH)
-# # saveToPickle(train_label_list, TRAIN_LABEL_PATH)
-# # Train the network
+# TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
+# TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
+# saveToPickle(train_input_list, TRAIN_INPUT_PATH)
+# saveToPickle(train_label_list, TRAIN_LABEL_PATH)
+# Train the network
 # trainModel(train_input_list, train_label_list, num_epochs=20, batch_size=20)
 
-## Testing related
-# print('loading train filenames')
-# test_files = loadFromPickle('../Datasets/processed/test_filenames.pkl')
-print('preprocessing raw test data')
-# TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_vector.pkl'
-# TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_vector.pkl'
-test_input_list, test_label_list, _ = toVectorTestFormat(test_files, DATA_DIR)
-# saveToPickle(test_input_list, TEST_INPUT_PATH)
-# saveToPickle(test_label_list, TEST_LABEL_PATH)
-# Test the network
+# ## Testing related
+# # print('loading train filenames')
+# # test_files = loadFromPickle('../Datasets/processed/test_filenames.pkl')
+# print('preprocessing raw test data')
+# # TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_vector.pkl'
+# # TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_vector.pkl'
+# test_input_list, test_label_list, _ = toVectorTestFormat(test_files, DATA_DIR)
+# # saveToPickle(test_input_list, TEST_INPUT_PATH)
+# # saveToPickle(test_label_list, TEST_LABEL_PATH)
+# # Test the network
+# model = loadModel()
+# testVecModelEval(test_input_list, test_label_list, model, verbose=True)
 model = loadModel()
-testVecModelEval(test_input_list, test_label_list, model, verbose=True)
+for test_file in test_files:
+    test_input_list, test_label_list, _ = toVectorTestFormat([test_file], DATA_DIR)
+    vec_fingering_res = testVecFutureModelSave(test_input_list, test_label_list, model)
+    evaluate_yz_single(test_file, DATA_DIR, vec_fingering_res)
 
 # Evaluate JP hmm method with same test_files
 # evaluate_yz(test_files, DATA_DIR, '../Datasets/JPESTResults/selfTrained/FHMM2/')

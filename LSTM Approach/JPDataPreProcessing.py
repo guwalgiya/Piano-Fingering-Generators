@@ -5,8 +5,8 @@ import pickle
 import itertools
 import numpy as np
 from music21 import pitch
-from parameters import BLOCK_LENGTH
-from Utils import slide_window_gen
+from parameters import BLOCK_LENGTH, FUTURE_LENGTH
+from Utils import slide_window_gen, slide_window_future_gen
 
 # treat left/right hand seperatly, only take right hand here
 def getListsFromSingeFile(filename, data_dir):
@@ -90,3 +90,14 @@ def toVectorTestFormat(filenames, data_dir):
         test_label_list.append(finger_list)
         test_id_list.append(id_list)
     return test_input_list, test_label_list, test_id_list
+
+def toVectorFutureTrainFormat(filenames, data_dir):
+    train_input_list = []
+    train_label_list = []
+    for filename in sorted(filenames):
+        _, finger_list, interval_list, accidental_list, _ = getListsFromSingeFile(filename, data_dir)
+        vector_list = [[f, i, bw_s, bw_e] for f, i, bw_s, bw_e in zip(finger_list[:-1], interval_list, accidental_list[:-1], accidental_list[1:])]
+        train_input_list.extend([l for l in slide_window_future_gen(vector_list, BLOCK_LENGTH, FUTURE_LENGTH)])
+        train_label_list.extend([f for f in finger_list[BLOCK_LENGTH-FUTURE_LENGTH:-FUTURE_LENGTH]])
+    return train_input_list, train_label_list
+        

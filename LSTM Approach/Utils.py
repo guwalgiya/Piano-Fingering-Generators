@@ -14,7 +14,7 @@ def SplitDataExcludeBachTestOnMozart(data_dir):
     bach_prefix = ['001','002','003','004','005','006','007','008','009','010','032','033','041','042','043','044','045','046','047','048','049','050']
     for _, _, filenames in os.walk(data_dir):
         filenames = sorted(filenames)
-        test_files = filenames[162:164]
+        test_files = filenames[41:51]
         train_files = []
         for filename in filenames[100:]:
             if filename.split('-')[0] not in bach_prefix:
@@ -59,6 +59,19 @@ def generateNewStateBi(old_state, finger_pred, new_interval, normalization=True)
 def generateNewVecState(old_state, finger_pred, new_vec):
     return old_state[1:] + [[finger_pred]+new_vec]     
 
+def generateNewVecFutureState(old_state, finger_pred, new_vec, future_size):
+    pred = old_state[-future_size]
+    pred[0] = finger_pred
+    old_state[-future_size] = pred
+    return old_state[1:] + [[0]+new_vec]
+
 def slide_window_gen(input_list, window_size):
     for start in range(len(input_list) - window_size + 1):
         yield input_list[start : start + window_size]
+
+def slide_window_future_gen(input_list, window_size, future_size):
+    for start in range(len(input_list) - window_size + 1):
+        full_list = input_list[start : start + window_size]
+        for i in range(window_size-future_size, window_size):
+            full_list[i][0] = 0
+        yield full_list
