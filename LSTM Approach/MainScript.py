@@ -1,9 +1,11 @@
-from Utils import shuffleDataset, SplitJPData, saveToPickle, loadFromPickle
+from Utils import shuffleDataset, SplitJPData, saveToPickle, loadFromPickle, SplitDataExcludeBachTestOnMozart
 from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat, toInterleavedTrainFormat
 from TrainModel import trainModel
 from TestVectorModel import loadModel, testVecModelSave, testVecModelEval
 from EvaluateJPMethod import evaluate_yz, evaluate_jp
 import statistics
+from JPDataPreProcessing import getListsFromSingeFile
+import numpy as np
 
 DATA_DIR = '../Datasets/JPDataset/'
 HMM_RES_DIR = '../Datasets/JPResDataset/'
@@ -12,36 +14,50 @@ HMM_RES_DIR = '../Datasets/JPResDataset/'
 # train_files, test_files = shuffleDataset(SPLIT_RATIO, DATA_DIR)
 # saveToPickle(train_files, '../Datasets/processed/train_filenames.pkl')
 # saveToPickle(test_files, '../Datasets/processed/test_filenames.pkl')
-train_files, test_files, hmm_res_files = SplitJPData(DATA_DIR, HMM_RES_DIR)
+# train_files, test_files, hmm_res_files = SplitJPData(DATA_DIR, HMM_RES_DIR)
+train_files, test_files = SplitDataExcludeBachTestOnMozart(DATA_DIR)
 
-# Training related
-# print('loading train filenames')
-# train_files = loadFromPickle('../Datasets/processed/train_filenames.pkl')
-print('preprocessing raw train data')
-# train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
-train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
-# TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
-# TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
-# saveToPickle(train_input_list, TRAIN_INPUT_PATH)
-# saveToPickle(train_label_list, TRAIN_LABEL_PATH)
-# Train the network
-trainModel(train_input_list, train_label_list, num_epochs=10, batch_size=20)
+# # Training related
+# # print('loading train filenames')
+# # train_files = loadFromPickle('../Datasets/processed/train_filenames.pkl')
+# print('preprocessing raw train data')
+# # train_input_list, train_label_list = toInterleavedTrainFormat(train_files, DATA_DIR)
+# train_input_list, train_label_list = toVectorTrainFormat(train_files, DATA_DIR)
+# # TRAIN_INPUT_PATH = '../Datasets/processed/train_input_list_4_vector.pkl'
+# # TRAIN_LABEL_PATH = '../Datasets/processed/train_label_list_4_vector.pkl'
+# # saveToPickle(train_input_list, TRAIN_INPUT_PATH)
+# # saveToPickle(train_label_list, TRAIN_LABEL_PATH)
+# # Train the network
+# trainModel(train_input_list, train_label_list, num_epochs=20, batch_size=20)
 
-# ## Testing related
+## Testing related
 # print('loading train filenames')
-# # test_files = loadFromPickle('../Datasets/processed/test_filenames.pkl')
-# print('preprocessing raw test data')
-# # TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_vector.pkl'
-# # TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_vector.pkl'
-test_input_list, test_label_list, _ = toVectorTestFormat(hmm_res_files, DATA_DIR)
-# # saveToPickle(test_input_list, TEST_INPUT_PATH)
-# # saveToPickle(test_label_list, TEST_LABEL_PATH)
-# # Test the network
+# test_files = loadFromPickle('../Datasets/processed/test_filenames.pkl')
+print('preprocessing raw test data')
+# TEST_INPUT_PATH = '../Datasets/processed/test_input_list_4_vector.pkl'
+# TEST_LABEL_PATH = '../Datasets/processed/test_label_list_4_vector.pkl'
+test_input_list, test_label_list, _ = toVectorTestFormat(test_files, DATA_DIR)
+# saveToPickle(test_input_list, TEST_INPUT_PATH)
+# saveToPickle(test_label_list, TEST_LABEL_PATH)
+# Test the network
 model = loadModel()
 testVecModelEval(test_input_list, test_label_list, model, verbose=True)
 
 # Evaluate JP hmm method with same test_files
 # evaluate_yz(test_files, DATA_DIR, '../Datasets/JPESTResults/selfTrained/FHMM2/')
+
+# model = loadModel()
+
+# test_input_list, test_label_list, _ = toVectorTestFormat(['009-1_fingering.csv'], DATA_DIR)
+# finger_res = testVecModelSave(test_input_list, test_label_list, model)
+# note_list, _, _, _, id_list = getListsFromSingeFile('009-1_fingering.csv', DATA_DIR)
+
+# np_id = np.array(id_list)
+# np_note = np.array(note_list)
+# np_finger = np.array(finger_res)
+# np_out = np.vstack((np_id, np_note))
+# np_out = np.vstack((np_out, np_finger))
+# print(np_out.T)
 # evaluate_yz(hmm_res_files, DATA_DIR, HMM_RES_DIR)
 
 # # Multiple fingering for one piece evaluation
