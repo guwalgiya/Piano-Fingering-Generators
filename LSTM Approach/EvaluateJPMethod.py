@@ -31,13 +31,18 @@ def evaluate_yz(filenames, gt_dir, est_dir, verbose=False):
     num_files = len(filenames)
     return total_true / num_files, 1 - total_not_ideal / num_files - total_wrong / num_files, total_wrong / num_files
 
-def evaluate_yz_single(filename, gt_dir, est_finger_list):
+def evaluate_yz_single(filename, gt_dir, est_finger_list, verbose=False):
     _, gt_finger_list, interval_list, accidental_list, _ = getListsFromSingeFile(filename, gt_dir)
     bw_list = [[s, e] for s, e in zip(accidental_list[:-1], accidental_list[1:])]
     num_abs_true, num_abs_false, num_not_ideal = main(interval_list, est_finger_list, bw_list, gt_finger_list)
-    print('absolute true: {}'.format(float(num_abs_true) / len(interval_list)))
-    print('absolute false: {}'.format(float(num_abs_false) / len(interval_list)))
-    print('not ideal: {}'.format(float(num_not_ideal) / len(interval_list)))
+    abs_true = float(num_abs_true) / len(interval_list)
+    abs_false = float(num_abs_false) / len(interval_list)
+    not_ideal = float(num_not_ideal) / len(interval_list)
+    if verbose:
+        print('absolute true: {}'.format(float(num_abs_true) / len(interval_list)))
+        print('absolute false: {}'.format(float(num_abs_false) / len(interval_list)))
+        print('not ideal: {}'.format(float(num_not_ideal) / len(interval_list)))
+    return abs_true, 1 - abs_false - not_ideal, abs_false
 
 def evaluate_jp(filenames, gt_dir, res_finger_list, res_id_list):
     gt_finger_lists = []
