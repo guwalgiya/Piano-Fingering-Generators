@@ -10,16 +10,47 @@ def elapsed(sec):
     else:
         return str(sec/(60*60)) + " hr"
 
-def SplitDataExcludeBachTestOnMozart(data_dir):
-    bach_prefix = ['001','002','003','004','005','006','007','008','009','010','032','033','041','042','043','044','045','046','047','048','049','050']
-    for _, _, filenames in os.walk(data_dir):
-        filenames = sorted(filenames)
-        test_files = filenames[41:51]
-        train_files = []
-        for filename in filenames[100:]:
-            if filename.split('-')[0] not in bach_prefix:
-                train_files.append(filename)
-    return train_files, test_files
+def SplitChopinData(data_dir):
+    for _,_, filenames in os.walk(data_dir):
+        filenames_ = sorted(filenames)
+        test_files = filenames_[100:150]
+        train_files = filenames_[150:] + filenames_[0 : 99]
+    pre_prefix = ''
+    hmm_files = []
+    for test_file in test_files:
+        prefix = test_file.split('-')[0]
+        if prefix != pre_prefix:
+            hmm_files.append(test_file)
+            pre_prefix = prefix
+    return train_files, test_files, hmm_files
+
+def SplitMozartData(data_dir):
+    for _,_, filenames in os.walk(data_dir):
+        filenames_ = sorted(filenames)
+        test_files = filenames_[40:100]
+        train_files = filenames_[0:40] + filenames_[100:]
+    pre_prefix = ''
+    hmm_files = []
+    for test_file in test_files:
+        prefix = test_file.split('-')[0]
+        if prefix != pre_prefix:
+            hmm_files.append(test_file)
+            pre_prefix = prefix
+    return train_files, test_files, hmm_files
+
+def SplitBachData(data_dir):
+    for _,_, filenames in os.walk(data_dir):
+        filenames_ = sorted(filenames)
+        test_files = filenames_[0:40]
+        train_files = filenames_[40:]
+    pre_prefix = ''
+    hmm_files = []
+    for test_file in test_files:
+        prefix = test_file.split('-')[0]
+        if prefix != pre_prefix:
+            hmm_files.append(test_file)
+            pre_prefix = prefix
+    return train_files, test_files, hmm_files
 
 def SplitJPData(data_dir, hmm_res_dir):
     for _, _, filenames in os.walk(data_dir):

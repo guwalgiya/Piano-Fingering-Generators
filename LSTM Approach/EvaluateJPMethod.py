@@ -2,9 +2,11 @@ import os
 from JPDataPreProcessing import getListsFromFilenames, getListsFromSingeFile
 from EvaluateVectorPhrase import main
 
-def evaluate_yz(filenames, gt_dir, est_dir):
+def evaluate_yz(filenames, gt_dir, est_dir, verbose=False):
+    total_true = 0
+    total_not_ideal = 0
+    total_wrong = 0
     for filename in filenames:
-        print(filename + ': ')
         _, gt_finger_list, interval_list, accidental_list, gt_id_list = getListsFromSingeFile(filename, gt_dir)
         _, est_finger_list, _, _, est_id_list = getListsFromSingeFile(filename, est_dir)
         
@@ -15,10 +17,19 @@ def evaluate_yz(filenames, gt_dir, est_dir):
         interval_aligned_list = [interval_list[i] for i in gt_align_idx[:-1]]
         bw_list = [[s, e] for s, e in zip(accidental_aligned_list[:-1], accidental_aligned_list[1:])]
         num_abs_true, num_abs_false, num_not_ideal = main(interval_aligned_list, est_aligned_finger, bw_list, gt_aligned_finger)
-        
-        print('absolute true: {}'.format(float(num_abs_true) / len(interval_list)))
-        print('absolute false: {}'.format(float(num_abs_false) / len(interval_list)))
-        print('not ideal: {}'.format(float(num_not_ideal) / len(interval_list)))
+        current_true = float(num_abs_true) / len(interval_list)
+        total_true += current_true
+        current_not_ideal = float(num_not_ideal) / len(interval_list)
+        total_not_ideal += current_not_ideal
+        current_wrong = float(num_abs_false) / len(interval_list)
+        total_wrong += current_wrong
+        if verbose:
+            print(filename + ': ')
+            print(f'absolute true: {current_true}')
+            print(f'absolute false: {current_wrong}')
+            print(f'not ideal: {current_not_ideal}')
+    num_files = len(filenames)
+    return total_true / num_files, 1 - total_not_ideal / num_files - total_wrong / num_files, total_wrong / num_files
 
 def evaluate_yz_single(filename, gt_dir, est_finger_list):
     _, gt_finger_list, interval_list, accidental_list, _ = getListsFromSingeFile(filename, gt_dir)
