@@ -1,6 +1,49 @@
 import os
+import statistics
 from JPDataPreProcessing import getListsFromFilenames, getListsFromSingeFile
 from EvaluateVectorPhrase import main
+from JPDataPreProcessing import toVectorTrainFormat, toVectorTestFormat, toInterleavedTrainFormat, toVectorFutureTrainFormat
+from TestVectorModel import loadModel, testVecModelSave, testVecModelEval, testVecFutureModelSave
+from parameters import DATA_DIR, HMM_RES_DIR
+from Utils import groupFingeringInTestFiles
+
+def getScoresForHmm(test_files, hmm_res_file, hmm_order):
+    _getScores(test_files, hmm_res_file, _getResListsHmm, hmm_order)
+
+def getScoresForDL(test_files, hmm_res_file, model):
+    _getScores(test_files, hmm_res_file, _getResListsDL, 'FHMM1', model)   
+
+def _getScores(test_files, hmm_res_files, resListsGetter, hmm_order, model = None):
+    file_dict = groupFingeringInTestFiles(test_files)
+    M_gen_list = [] 
+    M_high_list = [] 
+    M_soft_list = []
+    for hmm_res_file in hmm_res_files:
+        pre_fix = hmm_res_file.split('-')[0]
+        if pre_fix in file_dict:
+            multi_files = file_dict[pre_fix]
+            finger_list, id_list = resListsGetter(hmm_res_file, hmm_order, model)
+            M_gen, M_high, M_soft = evaluate_jp(multi_files, DATA_DIR, finger_list, id_list)
+            M_gen_list.append(M_gen)
+            M_high_list.append(M_high)
+            M_soft_list.append(M_soft)
+            # print(hmm_res_file)
+            # print('M_GEN: ', M_gen)
+            # print('M_HIGH: ', M_high)
+            # print('M_SOFT: ', M_soft)
+    print('Total mean: ')
+    print('M_GEN: ', statistics.mean(M_gen_list))
+    print('M_HIGH: ', statistics.mean(M_high_list))
+    print('M_SOFT: ', statistics.mean(M_soft_list))
+
+def _getResListsHmm(hmm_res_file, hmm_order, model = None):
+    _, finger_list, _, _, id_list = getListsFromSingeFile(hmm_res_file, HMM_RES_DIR + hmm_order + '/')
+    return finger_list, id_list
+
+def _getResListsDL(hmm_res_file, hmm_order, model):
+    test_input_list, test_label_list, test_id_list = toVectorTestFormat([hmm_res_file], HMM_RES_DIR + hmm_order + '/')
+    vec_fingering_res = testVecFutureModelSave(test_input_list, test_label_list, model)
+    return vec_fingering_res, test_id_list[0]
 
 def evaluate_yz(filenames, gt_dir, est_dir, verbose=False):
     total_true = 0

@@ -10,3 +10,5 @@ BLOCK_LENGTH = 12
 FUTURE_LENGTH = 9
 CHECKPOINT_PATH = 'trained_models/cp.ckpt'
 LOG_PATH = 'logs/'
+DATA_DIR = '../Datasets/JPDataset/'
+HMM_RES_DIR = '../Datasets/JPResDataset/'

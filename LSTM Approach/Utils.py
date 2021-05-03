@@ -10,6 +10,17 @@ def elapsed(sec):
     else:
         return str(sec/(60*60)) + " hr"
 
+def groupFingeringInTestFiles(test_files):
+    file_dict = {}
+    for test_file in test_files:
+        pre_fix = test_file.split('-')[0]
+        if pre_fix in file_dict:
+            file_dict[pre_fix].append(test_file)
+        else:
+            temp_list = [test_file]
+            file_dict[pre_fix] = temp_list
+    return file_dict
+
 def SplitChopinData(data_dir):
     for _,_, filenames in os.walk(data_dir):
         filenames_ = sorted(filenames)
